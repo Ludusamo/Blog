@@ -6,7 +6,7 @@ image:
   credit: dargadgetz
   creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
 comments: false
-modified: 2014-12-24
+modified: 2015-6-28
 ---
 
 ## Brendan Horng
@@ -18,4 +18,5 @@ I am a teenage technology enthusiast, programmer, and student. I am currently en
 I enjoy spending my time working on various programming projects (some of which you will see me write about here), spending time with my friends and family, and taking long walks.
 
 You can visit my main website here: [ludusamo.com](http://ludusamo.com)
+
 You can take a look at my resume here: [ludsumo.com/Resume](http://ludusamo.com/Resume)
