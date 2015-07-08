@@ -16,11 +16,13 @@ The first step I would like to take now is to step away from my compiler code an
 ### Stack Machine
 
 Positives
+
 - Highly portable
 - Operands are implicit
 - Easy to write compilers for
 
 Negatives
+
 - More instructions (PUSH and POP ops)
 - Relatively slower than register machine
 - Difficult to optimize Bytecode
