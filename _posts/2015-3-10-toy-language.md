@@ -2,7 +2,7 @@
 layout: post
 title: "Toy Language"
 modified: 2015-3-10 19:53:00
-tags: [Programming]
+tags: [Programming, ToyLanguage]
 ---
 ## Hi there
 This is my first blog post in a while. I will probably make another soon with an update to what happen with my game for the Scholastic Challenge. Today I am announcing another project that I am working on.
