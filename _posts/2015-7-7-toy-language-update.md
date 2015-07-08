@@ -25,15 +25,16 @@ Negatives
 - Relatively slower than register machine
 - Difficult to optimize Bytecode
 
-### 
-Register Machine
+### Register Machine
 
 Positives
+
 - Fewer instructions
 - Easy to optimize Bytecode
 - Relatively faster
 
 Negatives
+
 - Not as portable
 - Long instructions
 - Difficult to write compilers for
