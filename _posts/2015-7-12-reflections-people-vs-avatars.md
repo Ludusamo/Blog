@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reflections: \"Amazing Pictures of Real People and Their Avatars\""
-modified: 2015-7-4 11:31:00
+modified: 2015-7-12 14:08:00
 tags: [School, LitLang]
 ---
 
