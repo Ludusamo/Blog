@@ -1,0 +1,19 @@
+---
+layout: post
+title: "Reflections: \"Amazing Pictures of Real People and Their Avatars\""
+modified: 2015-7-4 11:31:00
+tags: [School, LitLang]
+---
+
+## "People Vs. Online Avatars"
+I must first say that I take slight issue with the title of this piece ([link](http://businessinsider.com/real-people-vs-avatars-2011-12?op=1) to article). I find it interesting that they would say that these are "Amazing Pictures". For this to be called amazing, that would imply that it is "astonishing" or something that creates surprise/wonder. However, it simply does not do that for me at all. Perhaps it is because I was/am a part of these that I am desensitized to these sorts of things. It could also be that I am missing something that everyone else is noticing that is so astonishing about the differences/similarities between people and their online personas.
+
+I think the reason that people find these amazing is that they have never been in the situation to be able to really choose "who" they are. These online games and the anonymity that they afford people is really the only "amazing" part of all of this. The online world for many serve as a method of escape and also a place where they can express themselves. I also used these online worlds as a way of escaping to a different "world". In the context of this article, I would probably more closely align myself with the type of person who would portray their online persona as similar to themselves as possible. So, I will speak a little from that viewpoint.
+
+The reasoning that I like to depict my characters in my own image is because then I feel a little more attached/connected with them. For me, online games were a way for me live out fantasies that I could not do in real life. Whether it be going on quests with friends or fighting dragons, there are simply things that real life would never be able to afford me to do. So, by connecting myself with my character in any way possible, it almost acts as a way for me to live out those experiences. However, this is only my viewpoint. I can also see why some people may want to have their characters not be representative of themselves at all. Perhaps they always wanted to be someone different than who they actually are and online personas allow people to do exactly that by leveraging the full power of anonymity.
+
+I would like to leave off my reflections of this piece by drawing a connection to something I had watched previously this week (the [link](https://www.youtube.com/watch?v=eh1zfdUTqBY) to the video is here). In this video, the team at Extra Credits (an online game design podcast) talked about a game called Rust and the choices that they made in representing race. What makes Rust different from other multiplayer games is that when players are thrown into the game they are given an avatar. No customization, no selections, they are just a randomly generated character. 
+
+So, in the video, they talked about how this striked up a lot of controversy in the gaming community. There were gamers who complained that they couldn't "get into the game" because their character wasn't the same race as them so they couldn't connect as well with them (probably similar people to my case). However, I would like to bring up a really good point that the folks at Extra Credit made. For a long time, most of the people making video games had the majority of their characters be caucasian. Interestingly enough, most of the people who are complaining about Rust are caucasian. While it might be true that having an avatar who does not personify the person might detract slightly from the experience, perhaps we should also keep in mind that a lot of non-caucasians for a long time also had to put up with playing as caucasian characters simply because they were all that was available. Did that detract from their experience? Just another thing to keep in mind. But, definitely a bold design choice by the developers who made Rust.
+
+- Brendan
