@@ -1,0 +1,277 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Problem: Cow Crossings</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=e19f461a52">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
+    
+    <meta property="og:site_name" content="Brendan's Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Problem: Cow Crossings">
+    <meta property="og:description" content="DECEMBER 26, 2014 Problem This is a link to the problem. Solution First task that I had to accomplish was to figure out how to determine if they were crossing or not. This ended up to be rather simple since their start and end Y positions are fixed. What it">
+    <meta property="og:url" content="http://localhost:2368/problem-cow-crossings/">
+    <meta property="article:published_time" content="2016-06-03T00:43:15.000Z">
+    <meta property="article:modified_time" content="2016-06-03T00:43:29.000Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Problem: Cow Crossings">
+    <meta name="twitter:description" content="DECEMBER 26, 2014 Problem This is a link to the problem. Solution First task that I had to accomplish was to figure out how to determine if they were crossing or not. This ended up to be rather simple since their start and end Y positions are fixed. What it">
+    <meta name="twitter:url" content="http://localhost:2368/problem-cow-crossings/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Brendan Horng">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Brendan&#x27;s Blog",
+        "logo": "http://localhost:2368/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Brendan Horng",
+        "url": "http://localhost:2368/author/brendan/",
+        "sameAs": []
+    },
+    "headline": "Problem: Cow Crossings",
+    "url": "http://localhost:2368/problem-cow-crossings/",
+    "datePublished": "2016-06-03T00:43:15.000Z",
+    "dateModified": "2016-06-03T00:43:29.000Z",
+    "description": "DECEMBER 26, 2014 Problem This is a link to the problem. Solution First task that I had to accomplish was to figure out how to determine if they were crossing or not. This ended up to be rather simple since their start and end Y positions are fixed. What it",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Brendan's Blog" href="../rss/index.html">
+    <script>
+var disqus_shortname = 'ludusamo';
+</script>
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-main-site" role="presentation"><a href="http://ludusamo.com">Main Site</a></li>
+            <li class="nav-resume" role="presentation"><a href="http://ludusamo.com/Resume">Resume</a></li>
+    </ul>
+        <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Problem: Cow Crossings</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-06-03">03 June 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>DECEMBER 26, 2014</p>
+
+<h2 id="problem">Problem</h2>
+
+<p>This is a <a href="http://www.usaco.org/index.php?page=viewproblem2&amp;cpid=242">link</a> to the problem.</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>First task that I had to accomplish was to figure out how to determine if they were crossing or not. This ended up to be rather simple since their start and end Y positions are fixed. What it turns out to be is that one cow's path must "surround" the other to be crossing.</p>
+
+<p>So essentially: <br>
+Given a cow A with path (x1, x2) and cow B with path (x3, x4). They would cross if: </p>
+
+<pre><code>(x1 &lt; x3 &amp;&amp; x2 &gt; x4) // Essentially saying that A "surrounds" B
+</code></pre>
+
+<pre><code>(x3 &lt; x1 &amp;&amp; x4 &gt; x2) // Also true if B surrounds A
+</code></pre>
+
+<p>After establishing that, in order to simplify the problem, I ordered all of the cows based on their start positions in order. <br>
+What this accomplished was that I knew as I went along, all the cows prior to the one being checked would have their first value less than the current cow. This means I just had to check if there was a cow previous to it with a larger ending position in order for there to exist a cow that surrounds it. So, I simply kept track of the largest end position. If it was greater, than I knew that the cow would cross with a cow even if I didn't know which one.</p>
+
+<p>If I left it here, then my solution would be wrong. There may be cases where a cow that would have crossed it hadn't occured yet. So I simply checked backwards as well. As I went forward I also kept a list of ones that I already checked off as not safe. Going backwards got all of the rest.</p>
+
+<p>This was my full solution:</p>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;vector&gt;
+#include &lt;algorithm&gt;
+#include &lt;utility&gt;
+
+#define pb push_back
+#define mp make_pair
+#define a first
+#define b second
+#define MAX_N = 100000
+
+/* N cows (1 &lt;= N &lt;= 100000)
+ * Road runs horizontally
+ * One sided described by y = 0; other by y = 1
+ * The cows will cross the road based on a_i and b_i which are their initial and final x positions
+ * 1M &lt;= a_i, b_i &lt;= 1M
+ * Cows are "safe" if their path does not intersect another cows's
+ *
+ * Objective: Count the number of safe cows.
+*/
+
+using namespace std;
+
+typedef pair&lt;int, int&gt; cow;  
+typedef vector&lt;cow&gt; VP;
+
+int N, output, checked[100000];  
+VP cows;
+
+bool compareCows(const cow &amp;a, const cow &amp;b) {  
+    return a.a &lt; b.a;
+}
+
+void solve() {  
+    output = 0; 
+    int nSC = 0; // not safe cows
+    int maxB = -2000000;
+    for (int a = 1; a &lt; N; a++) {
+        if (maxB &gt;= cows[a].b) {
+            checked[a] = 1;
+                nSC++;  
+        }
+        maxB = (maxB &gt; cows[a].b) ? maxB : cows[a].b;
+    }
+    int minB = 2000000; 
+    for (int a = N - 1; a &gt;= 0; a--) {
+        if (minB &lt;= cows[a].b &amp;&amp; checked[a] != 1) nSC++;    
+        minB = (minB &lt; cows[a].b) ? minB : cows[a].b;
+    }
+    output = N - nSC;
+}
+
+int main() {  
+    ifstream fin("crossings.in");
+        fin &gt;&gt; N;
+        int a, b;
+        for (int i = 0; i &lt; N; i++) {
+            fin &gt;&gt; a &gt;&gt; b;
+            cows.pb(mp(a, b));
+        }
+        sort(cows.begin(), cows.end(), compareCows);
+    fin.close();
+
+    solve();
+
+    ofstream fout("crossings.out");
+    fout &lt;&lt; output &lt;&lt; endl;
+    fout.close();
+    return 0;
+}
+</code></pre>
+
+<ul>
+<li>Brendan</li>
+</ul>
+        </section>
+
+        <footer class="post-footer">
+
+
+
+            <section class="author">
+                <h4><a href="../author/brendan/">Brendan Horng</a></h4>
+
+                    <p>Read <a href="../author/brendan/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Problem%3A%20Cow%20Crossings&amp;url=http://localhost:2368/problem-cow-crossings/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/problem-cow-crossings/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:2368/problem-cow-crossings/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story no-cover" href="../progress-12-26-14/">
+        <section class="post">
+            <h2>Progress: 12-26-14</h2>
+            <p>DECEMBER 26, 2014 Today's Progress Finally stopped being lazy enough to make some progress on this project. Today I…</p>
+        </section>
+    </a>
+    <a class="read-next-story prev no-cover" href="../problem-message-relay/">
+        <section class="post">
+            <h2>Problem: Message Relay</h2>
+            <p>DECEMBER 25, 2014 Introduction This is the one time that I will add an introduction as it is the…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Brendan's Blog</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=e19f461a52"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=e19f461a52"></script>
+
+</body>

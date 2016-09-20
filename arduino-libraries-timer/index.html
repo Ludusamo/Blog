@@ -1,0 +1,191 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Arduino Libraries: Timer</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=e19f461a52">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
+    
+    <meta property="og:site_name" content="Brendan's Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Arduino Libraries: Timer">
+    <meta property="og:description" content="Arduino Libraries I decided to create my own repository filled with libraries/utilities for Arduino that I would find useful. You can find the repository here. As a first entry, I find myself always implementing a timer in various projects, so I decided to write a standard one. Timer To">
+    <meta property="og:url" content="http://localhost:2368/arduino-libraries-timer/">
+    <meta property="article:published_time" content="2016-07-10T01:03:35.000Z">
+    <meta property="article:modified_time" content="2016-07-10T01:11:06.000Z">
+    <meta property="article:tag" content="Programming">
+    <meta property="article:tag" content="Arduino">
+    <meta property="article:tag" content="C++">
+    <meta property="article:tag" content="Library">
+    <meta property="article:tag" content="Timer">
+    <meta property="article:tag" content="Github">
+    <meta property="article:tag" content="Open Source">
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Arduino Libraries: Timer">
+    <meta name="twitter:description" content="Arduino Libraries I decided to create my own repository filled with libraries/utilities for Arduino that I would find useful. You can find the repository here. As a first entry, I find myself always implementing a timer in various projects, so I decided to write a standard one. Timer To">
+    <meta name="twitter:url" content="http://localhost:2368/arduino-libraries-timer/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Brendan Horng">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="Programming, Arduino, C++, Library, Timer, Github, Open Source">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Brendan&#x27;s Blog",
+        "logo": "http://localhost:2368/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Brendan Horng",
+        "url": "http://localhost:2368/author/brendan/",
+        "sameAs": []
+    },
+    "headline": "Arduino Libraries: Timer",
+    "url": "http://localhost:2368/arduino-libraries-timer/",
+    "datePublished": "2016-07-10T01:03:35.000Z",
+    "dateModified": "2016-07-10T01:11:06.000Z",
+    "keywords": "Programming, Arduino, C++, Library, Timer, Github, Open Source",
+    "description": "Arduino Libraries I decided to create my own repository filled with libraries/utilities for Arduino that I would find useful. You can find the repository here. As a first entry, I find myself always implementing a timer in various projects, so I decided to write a standard one. Timer To",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Brendan's Blog" href="../rss/index.html">
+    <script>
+var disqus_shortname = 'ludusamo';
+</script>
+</head>
+<body class="post-template tag-programming tag-arduino tag-c tag-library tag-timer tag-github tag-open-source nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-main-site" role="presentation"><a href="http://ludusamo.com">Main Site</a></li>
+            <li class="nav-resume" role="presentation"><a href="http://ludusamo.com/Resume">Resume</a></li>
+    </ul>
+        <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post tag-programming tag-arduino tag-c tag-library tag-timer tag-github tag-open-source">
+
+        <header class="post-header">
+            <h1 class="post-title">Arduino Libraries: Timer</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-07-10">10 July 2016</time>  on <a href="../tag/programming/">Programming</a>, <a href="../tag/arduino/">Arduino</a>, <a href="../tag/c/">C++</a>, <a href="../tag/library/">Library</a>, <a href="../tag/timer/">Timer</a>, <a href="../tag/github/">Github</a>, <a href="../tag/open-source/">Open Source</a>
+            </section>
+        </header>
+
+        <section class="post-content">
+            <h1 id="arduinolibraries">Arduino Libraries</h1>
+
+<p>I decided to create my own repository filled with libraries/utilities for Arduino that I would find useful. You can find the repository <a href="https://github.com/Ludusamo/ArduinoLibraries">here</a>. As a first entry, I find myself always implementing a timer in various projects, so I decided to write a standard one.</p>
+
+<h1 id="timer">Timer</h1>
+
+<p>To be honest, its not like it takes very long to implement one of these, but I still really shouldn't be wasting time rewriting this anytime I need one. The timer is very simple and will work until the <code>millis()</code> function in Arduino wraps around itself (~50 days according to the <a href="https://www.arduino.cc/en/Reference/Millis">Arduino website</a>). The timer automatically starts as soon as it is instantiated and can be reset with a <code>reset()</code> function. If you would like to see further examples and or the source code, feel free to take a look at the library on my <a href="https://github.com/Ludusamo/ArduinoLibraries/tree/master/Timer">Github</a>.</p>
+
+<ul>
+<li>Brendan</li>
+</ul>
+        </section>
+
+        <footer class="post-footer">
+
+
+
+            <section class="author">
+                <h4><a href="../author/brendan/">Brendan Horng</a></h4>
+
+                    <p>Read <a href="../author/brendan/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Arduino%20Libraries%3A%20Timer&amp;url=http://localhost:2368/arduino-libraries-timer/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/arduino-libraries-timer/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:2368/arduino-libraries-timer/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story prev no-cover" href="../fractal-tree-generation-in-mathematica/">
+        <section class="post">
+            <h2>Fractal Tree Generation in Mathematica</h2>
+            <p>JUNE 14, 2016 Why This was a project done for my Multivariable Calculus course. I wanted to share the…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Brendan's Blog</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=e19f461a52"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=e19f461a52"></script>
+
+</body>

@@ -1,0 +1,683 @@
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Brendan's Blog</title><description>Programming, engineering, and general rambling.</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Tue, 20 Sep 2016 02:47:24 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Arduino Libraries: Timer</title><description>&lt;h1 id="arduinolibraries"&gt;Arduino Libraries&lt;/h1&gt;
+
+&lt;p&gt;I decided to create my own repository filled with libraries/utilities for Arduino that I would find useful. You can find the repository &lt;a href="https://github.com/Ludusamo/ArduinoLibraries"&gt;here&lt;/a&gt;. As a first entry, I find myself always implementing a timer in various projects, so I decided to write a standard one.&lt;/p&gt;
+
+&lt;h1 id="timer"&gt;Timer&lt;/h1&gt;
+
+&lt;p&gt;To&lt;/p&gt;</description><link>http://localhost:2368/arduino-libraries-timer/</link><guid isPermaLink="false">f610ed44-f27b-4c25-a4c3-6db7e20bf931</guid><category>Programming</category><category>Arduino</category><category>C++</category><category>Library</category><category>Timer</category><category>Github</category><category>Open Source</category><dc:creator>Brendan Horng</dc:creator><pubDate>Sun, 10 Jul 2016 01:03:35 GMT</pubDate><content:encoded>&lt;h1 id="arduinolibraries"&gt;Arduino Libraries&lt;/h1&gt;
+
+&lt;p&gt;I decided to create my own repository filled with libraries/utilities for Arduino that I would find useful. You can find the repository &lt;a href="https://github.com/Ludusamo/ArduinoLibraries"&gt;here&lt;/a&gt;. As a first entry, I find myself always implementing a timer in various projects, so I decided to write a standard one.&lt;/p&gt;
+
+&lt;h1 id="timer"&gt;Timer&lt;/h1&gt;
+
+&lt;p&gt;To be honest, its not like it takes very long to implement one of these, but I still really shouldn't be wasting time rewriting this anytime I need one. The timer is very simple and will work until the &lt;code&gt;millis()&lt;/code&gt; function in Arduino wraps around itself (~50 days according to the &lt;a href="https://www.arduino.cc/en/Reference/Millis"&gt;Arduino website&lt;/a&gt;). The timer automatically starts as soon as it is instantiated and can be reset with a &lt;code&gt;reset()&lt;/code&gt; function. If you would like to see further examples and or the source code, feel free to take a look at the library on my &lt;a href="https://github.com/Ludusamo/ArduinoLibraries/tree/master/Timer"&gt;Github&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Brendan&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Fractal Tree Generation in Mathematica</title><description>&lt;p&gt;JUNE 14, 2016&lt;/p&gt;
+
+&lt;h1 id="why"&gt;Why&lt;/h1&gt;
+
+&lt;p&gt;This was a project done for my Multivariable Calculus course. I wanted to share the final product of my efforts so here it is.&lt;/p&gt;
+
+&lt;h1 id="sampleoutputs"&gt;Sample Outputs&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src="http://i.imgur.com/8sxYhsS.png" alt="Sample 1"&gt;
+&lt;img src="http://i.imgur.com/e79WWu6.png" alt="Sample 2"&gt;&lt;/p&gt;
+
+&lt;h1 id="projectfiles"&gt;Project Files&lt;/h1&gt;
+
+&lt;p&gt;If you would like to read more about what I did for this project, you should visit it's&lt;/p&gt;</description><link>http://localhost:2368/fractal-tree-generation-in-mathematica/</link><guid isPermaLink="false">b446f04f-7bda-4fc5-871e-995cb7556bc7</guid><category>Programming</category><category>Project</category><category>Mathematica</category><category>School</category><category>Fractals</category><category>Generation</category><category>Trees</category><category>Fractal Trees</category><dc:creator>Brendan Horng</dc:creator><pubDate>Wed, 15 Jun 2016 00:42:57 GMT</pubDate><content:encoded>&lt;p&gt;JUNE 14, 2016&lt;/p&gt;
+
+&lt;h1 id="why"&gt;Why&lt;/h1&gt;
+
+&lt;p&gt;This was a project done for my Multivariable Calculus course. I wanted to share the final product of my efforts so here it is.&lt;/p&gt;
+
+&lt;h1 id="sampleoutputs"&gt;Sample Outputs&lt;/h1&gt;
+
+&lt;p&gt;&lt;img src="http://i.imgur.com/8sxYhsS.png" alt="Sample 1"&gt;
+&lt;img src="http://i.imgur.com/e79WWu6.png" alt="Sample 2"&gt;&lt;/p&gt;
+
+&lt;h1 id="projectfiles"&gt;Project Files&lt;/h1&gt;
+
+&lt;p&gt;If you would like to read more about what I did for this project, you should visit it's &lt;a href="https://github.com/Ludusamo/Mathematica-FractalTree"&gt;Github Repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The project is open source so feel free to look around in the notebook file if you have Mathematica and play around with it.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Brendan&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Project: Work Hard, Play Hard</title><description>&lt;p&gt;JUNE 5, 2016&lt;/p&gt;
+
+&lt;h1 id="inspiration"&gt;Inspiration&lt;/h1&gt;
+
+&lt;p&gt;I am in my senior year of high school. If you are in the states, you will know how quickly motivation for seniors in high school to do work deteriorates. As such, I was finding that I was spending an increasing amount of time playing games&lt;/p&gt;</description><link>http://localhost:2368/project-work-hard-play-hard/</link><guid isPermaLink="false">13d66609-a707-4c9b-96b1-53067664ada0</guid><category>Programming</category><category>Project</category><category>Pebble</category><category>Time</category><category>Round</category><category>Pebble Time Round</category><category>Work Hard Play Hard</category><dc:creator>Brendan Horng</dc:creator><pubDate>Sun, 05 Jun 2016 20:36:03 GMT</pubDate><content:encoded>&lt;p&gt;JUNE 5, 2016&lt;/p&gt;
+
+&lt;h1 id="inspiration"&gt;Inspiration&lt;/h1&gt;
+
+&lt;p&gt;I am in my senior year of high school. If you are in the states, you will know how quickly motivation for seniors in high school to do work deteriorates. As such, I was finding that I was spending an increasing amount of time playing games and not doing more "worthwhile" things.&lt;/p&gt;
+
+&lt;p&gt;One of these games that I played was &lt;a href="https://www.guildwars2.com/en/"&gt;Guild Wars 2&lt;/a&gt;. I picked up the game over the winter holidays to play with my friends, and I &lt;strong&gt;binged&lt;/strong&gt; this game &lt;strong&gt;HARD&lt;/strong&gt;. It was clearly becoming an issue. However, regardless of that, one feature that I really liked about this game was that it had a simple command called: &lt;code&gt;/age&lt;/code&gt;. Essentially what this did, was just tell you how much time total you have spent playing the game.&lt;/p&gt;
+
+&lt;p&gt;This got me thinking, I should really start tracking the time I spend working and playing. Around that time, I got a Pebble Time Round, so I decided to get off my butt and make an application.&lt;/p&gt;
+
+&lt;h1 id="idea"&gt;Idea&lt;/h1&gt;
+
+&lt;p&gt;So, the application would essentially do exactly what I described. On the simplest level, I want the application to be able to tell me the distribution of time that I have spent "playing" as opposed to "working". &lt;/p&gt;
+
+&lt;p&gt;I already have a preliminary version of the application up. Here are a couple pictures:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/06/title.png" alt="title"&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://localhost:2368/content/images/2016/06/select.png" alt="select"&gt;
+Select between modes. &lt;br&gt;
+&lt;img src="http://localhost:2368/content/images/2016/06/start.png" alt="start"&gt;
+Start Time. &lt;br&gt;
+&lt;img src="http://localhost:2368/content/images/2016/06/stop.png" alt="stop"&gt;
+Stop Time. &lt;br&gt;
+&lt;img src="http://localhost:2368/content/images/2016/06/visualizer.png" alt="visualizer"&gt;
+I even have a pretty nice first visualizer in there.&lt;/p&gt;
+
+&lt;h1 id="future"&gt;Future&lt;/h1&gt;
+
+&lt;p&gt;Right now, the app is very basic. It only keeps track of the total amount of time "playing" or "working" in a single day. I might release a preliminary version with just this. However, I plan to expand it to store data over extended periods of time (companion application or online application?). But that will take a little bit of time. I also hope to tag this information, so I might even be able to see the distribution of time that I spend on individual things.&lt;/p&gt;
+
+&lt;p&gt;But for now, I am pretty proud that I finally got off my butt to do something that looks like it might actually reach completion.&lt;/p&gt;
+
+&lt;p&gt;Well, until next time.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Brendan&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Update: June 4th, 2016</title><description>&lt;p&gt;JUNE 4, 2016&lt;/p&gt;
+
+&lt;p&gt;It has been a while since I posted on this blog. Things have been busy, but now I want to try this blogging thing again.&lt;/p&gt;
+
+&lt;h4 id="whatsnew"&gt;What's new?&lt;/h4&gt;
+
+&lt;h5 id="blog"&gt;Blog:&lt;/h5&gt;
+
+&lt;p&gt;I migrated this blog over to a Ghost system. The nice folks over at &lt;a href="https://github.com/"&gt;Github&lt;/a&gt; provide this really nice&lt;/p&gt;</description><link>http://localhost:2368/update-june-4th-2016/</link><guid isPermaLink="false">3d8415ca-b899-4846-be5e-7914ead586a7</guid><category>Programming</category><category>Personal</category><category>Update</category><dc:creator>Brendan Horng</dc:creator><pubDate>Sun, 05 Jun 2016 00:33:00 GMT</pubDate><content:encoded>&lt;p&gt;JUNE 4, 2016&lt;/p&gt;
+
+&lt;p&gt;It has been a while since I posted on this blog. Things have been busy, but now I want to try this blogging thing again.&lt;/p&gt;
+
+&lt;h4 id="whatsnew"&gt;What's new?&lt;/h4&gt;
+
+&lt;h5 id="blog"&gt;Blog:&lt;/h5&gt;
+
+&lt;p&gt;I migrated this blog over to a Ghost system. The nice folks over at &lt;a href="https://github.com/"&gt;Github&lt;/a&gt; provide this really nice &lt;a href="https://education.github.com/pack"&gt;student pack&lt;/a&gt;. Among the various things that they supply, it also includes servers on &lt;a href="https://bitnami.com/"&gt;Bitnami&lt;/a&gt; which allowed me to deploy this very nice looking blog. I will give this a shot.&lt;/p&gt;
+
+&lt;h5 id="toylanguage"&gt;Toy Language:&lt;/h5&gt;
+
+&lt;p&gt;This project is still going on. There have been a few changes that I will talk about in a future blog post, but for now, I will just say I have learned a lot since I first started the project.&lt;/p&gt;
+
+&lt;h5 id="workhardplayhard"&gt;Work Hard, Play Hard:&lt;/h5&gt;
+
+&lt;p&gt;I have a renewed drive to develop for the Pebble smartwatch due to recently purchasing a Pebble Round. I have come up with an app that I want to develop which I will speak more about in the future.&lt;/p&gt;
+
+&lt;h4 id="sooooo"&gt;Sooooo...&lt;/h4&gt;
+
+&lt;p&gt;Its a lot of "more to come", but this time hopefully I will stick to this blogging thing. Well that's all for now.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Brendan Horng&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Toy Language: VM Update 1</title><description>&lt;p&gt;JULY 17, 2015&lt;/p&gt;
+
+&lt;h2 id="progress"&gt;Progress&lt;/h2&gt;
+
+&lt;p&gt;So, this is one of my updates on the progress of the VM. I think it is currently at a point that I can go forward with continuing on writing my compiler. Originally, I wrote some code that demonstrated how my language would look. This was&lt;/p&gt;</description><link>http://localhost:2368/toy-language-vm-update-1/</link><guid isPermaLink="false">a015af7a-a70b-48bb-b1f0-429e4796704e</guid><category>Programming</category><dc:creator>Brendan Horng</dc:creator><pubDate>Fri, 03 Jun 2016 00:59:14 GMT</pubDate><content:encoded>&lt;p&gt;JULY 17, 2015&lt;/p&gt;
+
+&lt;h2 id="progress"&gt;Progress&lt;/h2&gt;
+
+&lt;p&gt;So, this is one of my updates on the progress of the VM. I think it is currently at a point that I can go forward with continuing on writing my compiler. Originally, I wrote some code that demonstrated how my language would look. This was the code:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;int a = 10  
+int b = 10  
+if (a == b)  
+    print("hi")
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;My original thought was, if I could get my compiler and programming language to do at least that, then I could expand from there. In fact, my VM should be able to handle much more than that. It has branching and can make calls to functions as well. &lt;/p&gt;
+
+&lt;p&gt;There are no object oriented code structures yet and there are also no support for arrays. I will deal with those in the future. For now, everything will also compile down to my VM's bytecode.&lt;/p&gt;
+
+&lt;p&gt;At this point, I will probably begin to work on my compiler. I will most likely be implementing a recursive descent parser to handle the parsing of my language.&lt;/p&gt;
+
+&lt;p&gt;For now, that is all because I got to go to work soon. Further updates will be made in the future.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ludusamo&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Toy Language Update</title><description>&lt;p&gt;JULY 07, 2015&lt;/p&gt;
+
+&lt;h2 id="wowitsbeenawhile"&gt;Wow it's been a while.&lt;/h2&gt;
+
+&lt;p&gt;So, my first (and last) update on this was... 4 months ago??? Wow... Well now that it is summer time, I have more time to update this blog. The progress on the Toy Language didn't just not progress at all during all&lt;/p&gt;</description><link>http://localhost:2368/toy-language-update/</link><guid isPermaLink="false">85f5af5e-9724-46c0-b90f-e6c859816ef4</guid><category>Programming</category><dc:creator>Brendan Horng</dc:creator><pubDate>Fri, 03 Jun 2016 00:52:00 GMT</pubDate><content:encoded>&lt;p&gt;JULY 07, 2015&lt;/p&gt;
+
+&lt;h2 id="wowitsbeenawhile"&gt;Wow it's been a while.&lt;/h2&gt;
+
+&lt;p&gt;So, my first (and last) update on this was... 4 months ago??? Wow... Well now that it is summer time, I have more time to update this blog. The progress on the Toy Language didn't just not progress at all during all that time, I have been working on it in my spare time in between school. However, now I have more time to dedicate on it.&lt;/p&gt;
+
+&lt;h2 id="progress"&gt;Progress&lt;/h2&gt;
+
+&lt;p&gt;During the past four months, I have been focusing most of my time mostly coming up with the lexical analyzer and the parser. However, now I am realizing that I have delved so deep into my code that I lost sight of the bigger picture. So, now I am taking a step back and re-evaluating the steps I need to take.&lt;/p&gt;
+
+&lt;h2 id="vm"&gt;VM&lt;/h2&gt;
+
+&lt;p&gt;The first step I would like to take now is to step away from my compiler code and make a Virtual Machine. I have been doing some research on virtual machines during the past week and I have learned quite a bit. I have two basic implementations of a stack machine and a register machine. While my knowledge is imperfect, from what I can understand, these are the perks and downsides of the two systems:&lt;/p&gt;
+
+&lt;h3 id="stackmachine"&gt;Stack Machine&lt;/h3&gt;
+
+&lt;p&gt;Positives&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Highly portable&lt;/li&gt;
+&lt;li&gt;Operands are implicit&lt;/li&gt;
+&lt;li&gt;Easy to write compilers for&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Negatives&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;More instructions (PUSH and POP ops)&lt;/li&gt;
+&lt;li&gt;Relatively slower than register machine&lt;/li&gt;
+&lt;li&gt;Difficult to optimize Bytecode&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="registermachine"&gt;Register Machine&lt;/h3&gt;
+
+&lt;p&gt;Positives&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fewer instructions&lt;/li&gt;
+&lt;li&gt;Easy to optimize Bytecode&lt;/li&gt;
+&lt;li&gt;Relatively faster&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Negatives&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Not as portable&lt;/li&gt;
+&lt;li&gt;Long instructions&lt;/li&gt;
+&lt;li&gt;Difficult to write compilers for&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id="whatidecidedtouse"&gt;What I decided to use&lt;/h3&gt;
+
+&lt;p&gt;For the given reasons, while the register machine was very tempting, I have decided to use the stack machine due to the relative ease of creating one. There is nothing to stop me from switching to a register machine later on. But for now, for simplicity's sake, I am going to be going forward with a stack machine.&lt;/p&gt;
+
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;So, for now, that's all. I will probably make more regular updates on the progress of the VM. As soon as the VM is done, I will be able to move forward and relook at my compiler. Hopefully, with a VM that I can understand, I will have an easier time parsing and converting the language into the necessary format.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ludusamo&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>First Week of Work</title><description>&lt;p&gt;JULY 03, 2015&lt;/p&gt;
+
+&lt;h2 id="firstweekcomplete"&gt;First Week Complete!&lt;/h2&gt;
+
+&lt;p&gt;Milestone complete? Achievement unlocked? Well, in either case, this being my first real job definitely makes it a milestone in my life.&lt;/p&gt;
+
+&lt;h2 id="howitwent"&gt;How it went:&lt;/h2&gt;
+
+&lt;p&gt;Well, this obviously was a new experience for me seeing as how I have never had a real job&lt;/p&gt;</description><link>http://localhost:2368/first-week-of-work/</link><guid isPermaLink="false">dbb6444b-369a-4b88-a362-97c0e6d48e4e</guid><category>Personal</category><dc:creator>Brendan Horng</dc:creator><pubDate>Fri, 03 Jun 2016 00:50:21 GMT</pubDate><content:encoded>&lt;p&gt;JULY 03, 2015&lt;/p&gt;
+
+&lt;h2 id="firstweekcomplete"&gt;First Week Complete!&lt;/h2&gt;
+
+&lt;p&gt;Milestone complete? Achievement unlocked? Well, in either case, this being my first real job definitely makes it a milestone in my life.&lt;/p&gt;
+
+&lt;h2 id="howitwent"&gt;How it went:&lt;/h2&gt;
+
+&lt;p&gt;Well, this obviously was a new experience for me seeing as how I have never had a real job before. There are definitely some things I will have to learn. To begin, some negatives:&lt;/p&gt;
+
+&lt;h3 id="wowisithardtositinoneplacefor8hours"&gt;WOW is it hard to sit in one place for 8 hours...&lt;/h3&gt;
+
+&lt;p&gt;I mean I suppose I do it at home already, but working for 8 hours is difficult. Now don't get me wrong, I have a lunch break, and I am free to move around whenever, but it is pretty taxing to work for so long.&lt;/p&gt;
+
+&lt;h3 id="doingonethingalldaycanbecomealittledull"&gt;Doing one thing all day can become a little dull...&lt;/h3&gt;
+
+&lt;p&gt;I love game development. That was how I began programming in the first place. But wow, it becomes even a little dull for me by the end of the day. I need to start planning out my days better at the beginning so I can have some other tasks to break up the work day for me.&lt;/p&gt;
+
+&lt;p&gt;Now, I wouldn't want to only present the negatives, let's end on a positive note!&lt;/p&gt;
+
+&lt;h3 id="goodjobmeforchoosingajobthatiactuallyenjoy"&gt;Good job me for choosing a job that I ACTUALLY enjoy.&lt;/h3&gt;
+
+&lt;p&gt;Despite me saying that the game development starts to get dull by the end of the day, I still LOVE game dev. I have a hard time imagining how I would go through a work day without actually caring about what I do. I mean I am sure I would be able to, but this just makes it A LOT easier and even fun in the process.&lt;/p&gt;
+
+&lt;h3 id="fantasticworkenvironment"&gt;Fantastic work environment.&lt;/h3&gt;
+
+&lt;p&gt;BrightLogic is a relatively small company, but everything feels so friendly. Everyone around knows each other and I know I can go to anyone at any point to ask for help if I need it. The environment is overall just very supportive, and so far I am glad that this is the company with my first work experience.&lt;/p&gt;
+
+&lt;h2 id="finalremarks"&gt;Final Remarks&lt;/h2&gt;
+
+&lt;p&gt;It has been a great week in many ways. I am glad that this was a successful first work week. I have many things to learn and many things I should improve myself on. But for now, here is to many more years of work! CHEERS!&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Brendan&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>First Day of Work</title><description>&lt;p&gt;JUNE 29, 2015&lt;/p&gt;
+
+&lt;h2 id="brightlogic"&gt;BrightLogic&lt;/h2&gt;
+
+&lt;p&gt;Today was my first day interning at &lt;a href="http://brightlogic.com"&gt;BrightLogic&lt;/a&gt;. This is my first experience working and I was very excited to get started.&lt;/p&gt;
+
+&lt;p&gt;Even though today was mostly spent setting up and getting acquainted with our work environment, it was still a tiring day. I completed setting&lt;/p&gt;</description><link>http://localhost:2368/first-day-of-work/</link><guid isPermaLink="false">7a383883-f68c-4883-b6d5-6778c31a507f</guid><category>Personal</category><dc:creator>Brendan Horng</dc:creator><pubDate>Fri, 03 Jun 2016 00:49:43 GMT</pubDate><content:encoded>&lt;p&gt;JUNE 29, 2015&lt;/p&gt;
+
+&lt;h2 id="brightlogic"&gt;BrightLogic&lt;/h2&gt;
+
+&lt;p&gt;Today was my first day interning at &lt;a href="http://brightlogic.com"&gt;BrightLogic&lt;/a&gt;. This is my first experience working and I was very excited to get started.&lt;/p&gt;
+
+&lt;p&gt;Even though today was mostly spent setting up and getting acquainted with our work environment, it was still a tiring day. I completed setting up my little cubicle space along with meeting everyone in the office.&lt;/p&gt;
+
+&lt;h2 id="myday"&gt;My Day&lt;/h2&gt;
+
+&lt;p&gt;I spent the day learning about the interfaces that I would be using in order to begin working on applications for BrightLogic's ActiveFloor. I also spent some time brainstorming ideas for applications and games that I may want to implement for the ActiveFloor.&lt;/p&gt;
+
+&lt;p&gt;Overall, it was a pretty good day and I look forward to learning and doing more tomorrow.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Brendan&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>HackBCA Post-Mortem</title><description>&lt;p&gt;APRIL 01, 2015&lt;/p&gt;
+
+&lt;h2 id="hackbca"&gt;HackBCA&lt;/h2&gt;
+
+&lt;p&gt;Oh boy, nothing turned out the way that we had originally planned. However, it was a lot of fun, and we ended up having a pretty cool product in the end. We ended up creating a pretty cool bow and arrow game with the Intel Edison&lt;/p&gt;</description><link>http://localhost:2368/hackbca-post-mortem/</link><guid isPermaLink="false">40e545b6-86f1-4cf1-8842-a8bdbbaf6313</guid><category>Personal</category><dc:creator>Brendan Horng</dc:creator><pubDate>Fri, 03 Jun 2016 00:48:54 GMT</pubDate><content:encoded>&lt;p&gt;APRIL 01, 2015&lt;/p&gt;
+
+&lt;h2 id="hackbca"&gt;HackBCA&lt;/h2&gt;
+
+&lt;p&gt;Oh boy, nothing turned out the way that we had originally planned. However, it was a lot of fun, and we ended up having a pretty cool product in the end. We ended up creating a pretty cool bow and arrow game with the Intel Edison board serving as the control scheme. This resulted in us winning Intel's subcategory for most creative, which one us each a &lt;a href="http://www.dell.com/us/p/dell-venue-8-3840-tablet/pd"&gt;Dell Venue 8 Tablet&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id="whatwentwrong"&gt;What went wrong&lt;/h2&gt;
+
+&lt;p&gt;The EMG sensor had arrived two days prior to the event. I went into school the next day to begin the solder work. However, my soldering skills are abyssmal, and it didn't help that I was rushing to finish it up. I had an almost ready sensor by the end of the day.&lt;/p&gt;
+
+&lt;p&gt;Then the day of the hackathon, we tried to finish up the sensor. However, it ended up failing and it did not seem to be working. At this point, I sort of began panicking. I gave up on the sensor around 9 or 10. Then, a nice mentor offered me a MYO that he had with him. This was fantastic news... but he didn't have the bluetooth dongle so it didn't work.&lt;/p&gt;
+
+&lt;p&gt;At this point, we decided to try and create a control scheme for our game using an Android device. This fell apart because I didn't have Android Studio installed, and I had difficulty setting it up at the time. At the end of all this, we were sitting around 12-1 with the input end of the game not even starting production.&lt;/p&gt;
+
+&lt;h2 id="whatwentright"&gt;What went right&lt;/h2&gt;
+
+&lt;p&gt;This picks up where everything that went wrong ended. My friend came over with the Intel Edison board that he had received from Intel. He wanted me to help teach him to program the board. We explained our problem to him, and he said that his Intel board might be able to serve as that control scheme that we needed. I took a look through the sensors that they gave him. There were two sensors that we could use in order to create something interesting.&lt;/p&gt;
+
+&lt;p&gt;Long story short, I spent the rest of the night programming the Intel Edison board to serve as a control scheme.&lt;/p&gt;
+
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;This was our final product:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="https://i.imgur.com/G2vE8uv.jpg" alt="Final HackBCA product."&gt;&lt;/p&gt;
+
+&lt;p&gt;It was a fantastic experience. I learned a lot that night, and I am pretty proud of the end result. Our team pulled through in the end and we had a pretty cool prize to show for it. I am definitely looking forward to my next Hackathon.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Brendan&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Toy Language</title><description>&lt;p&gt;MARCH 10, 2015&lt;/p&gt;
+
+&lt;h2 id="hithere"&gt;Hi there&lt;/h2&gt;
+
+&lt;p&gt;This is my first blog post in a while. I will probably make another soon with an update to what happen with my game for the Scholastic Challenge. Today I am announcing another project that I am working on.&lt;/p&gt;
+
+&lt;h2 id="whatamiupto"&gt;What am I up to?&lt;/h2&gt;
+
+&lt;p&gt;I&lt;/p&gt;</description><link>http://localhost:2368/toy-language/</link><guid isPermaLink="false">bbb2e530-17d5-46ac-97aa-cf5ec76cd0ff</guid><category>Programming</category><dc:creator>Brendan Horng</dc:creator><pubDate>Fri, 03 Jun 2016 00:48:14 GMT</pubDate><content:encoded>&lt;p&gt;MARCH 10, 2015&lt;/p&gt;
+
+&lt;h2 id="hithere"&gt;Hi there&lt;/h2&gt;
+
+&lt;p&gt;This is my first blog post in a while. I will probably make another soon with an update to what happen with my game for the Scholastic Challenge. Today I am announcing another project that I am working on.&lt;/p&gt;
+
+&lt;h2 id="whatamiupto"&gt;What am I up to?&lt;/h2&gt;
+
+&lt;p&gt;I am starting a new little project that basically entails me creating a simple scripting language. I am not planning on doing anything too fancy with it. &lt;br&gt;
+I was simply playing around with the &lt;a href="http://www.godotengine.org"&gt;Godot Engine&lt;/a&gt;, which I highly recommend, I saw that they had implemented their own scripting language, and I wondered how hard it was to create one. &lt;br&gt;
+So, I poked around a bit and I saw that there is not a whole ton of resources/tutorials on it. The ones that I did find bored me a little bit so I just decided to try making one from scratch. &lt;br&gt;
+Its not going to be the most efficient language, but I think of it as a little fun challenge for myself. I will probably make further posts on the progress in the future.&lt;/p&gt;
+
+&lt;h2 id="othernews"&gt;Other News&lt;/h2&gt;
+
+&lt;p&gt;I have been looking into electromyography (EMG) as a form of signal to use for a controller. I recently bought a sensor parts from &lt;a href="http://www.bitalino.com"&gt;Bitalino&lt;/a&gt;. More on this in the future.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ludusamo&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Progress: 12-28-14</title><description>&lt;p&gt;DECEMBER 28, 2014&lt;/p&gt;
+
+&lt;h2 id="todaysprogress"&gt;Today's Progress&lt;/h2&gt;
+
+&lt;p&gt;Oh boy did we get a lot done today. Not quite as much as I wanted to from yesterday, but quite a bit.&lt;/p&gt;
+
+&lt;h2 id="issues"&gt;Issues&lt;/h2&gt;
+
+&lt;p&gt;As far as coding goes, today went pretty smoothly. Threw a lot of things together in a short span of time,&lt;/p&gt;</description><link>http://localhost:2368/progress-12-28-14/</link><guid isPermaLink="false">0a524df2-8946-4d6f-9376-b3a84adc1a04</guid><category>Programming</category><dc:creator>Brendan Horng</dc:creator><pubDate>Fri, 03 Jun 2016 00:47:24 GMT</pubDate><content:encoded>&lt;p&gt;DECEMBER 28, 2014&lt;/p&gt;
+
+&lt;h2 id="todaysprogress"&gt;Today's Progress&lt;/h2&gt;
+
+&lt;p&gt;Oh boy did we get a lot done today. Not quite as much as I wanted to from yesterday, but quite a bit.&lt;/p&gt;
+
+&lt;h2 id="issues"&gt;Issues&lt;/h2&gt;
+
+&lt;p&gt;As far as coding goes, today went pretty smoothly. Threw a lot of things together in a short span of time, so if bugs arise in the future, well there is a good chance that they came from today. But that's an issue for another day. Today we gotta fight a fast approaching deadline.&lt;/p&gt;
+
+&lt;h2 id="taskscompleted"&gt;Tasks Completed&lt;/h2&gt;
+
+&lt;p&gt;Today I:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Implemented a pause menu with save, resume, and quit functionality&lt;/li&gt;
+&lt;li&gt;Implemented 2 of the foreseeable 3 dialog types (message and character dialog)&lt;/li&gt;
+&lt;li&gt;Implemented a couple more animations&lt;/li&gt;
+&lt;li&gt;Minor bug fixes&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The save function as of right now only takes in the players position and loads everything else the same. However, this leaves room for the save functionality to be expanded in the future.&lt;/p&gt;
+
+&lt;p&gt;This is a short gif of today's progress:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src="http://i.imgur.com/o002bEH.gif" alt="Dialog and Pause Demo."&gt;&lt;/p&gt;
+
+&lt;p&gt;So I didn't finish everything I wanted to finish today, but it was good progress. Tomorrow I am going to spearhead NPCs and begin to program in one of the main tropes of the game which is the programming interface for our character. Once that is done, I can begin to move forward on level design and hopefully begin to flesh out the game. Assuming there are no issues, but there &lt;strong&gt;&lt;em&gt;always&lt;/em&gt;&lt;/strong&gt; will be. Until next time.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ludusamo&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Problem: Perimeter</title><description>&lt;p&gt;DECEMBER 28, 2014&lt;/p&gt;
+
+&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+
+&lt;p&gt;This is a &lt;a href="http://www.usaco.org/index.php?page=viewproblem2&amp;amp;cpid=243"&gt;link&lt;/a&gt; to the problem.&lt;/p&gt;
+
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;This problem was considerably easier than the other problems in the same competition. I just simply utilized a recursive floodfill in order to determine the perimeter.&lt;/p&gt;
+
+&lt;p&gt;This was done by first completely loading the field into an array.&lt;/p&gt;</description><link>http://localhost:2368/problem-perimeter/</link><guid isPermaLink="false">74738fed-56e2-4f96-8f9b-eb24a0fdb6ec</guid><dc:creator>Brendan Horng</dc:creator><pubDate>Fri, 03 Jun 2016 00:46:30 GMT</pubDate><content:encoded>&lt;p&gt;DECEMBER 28, 2014&lt;/p&gt;
+
+&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+
+&lt;p&gt;This is a &lt;a href="http://www.usaco.org/index.php?page=viewproblem2&amp;amp;cpid=243"&gt;link&lt;/a&gt; to the problem.&lt;/p&gt;
+
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;This problem was considerably easier than the other problems in the same competition. I just simply utilized a recursive floodfill in order to determine the perimeter.&lt;/p&gt;
+
+&lt;p&gt;This was done by first completely loading the field into an array. However, I had to ensure that the floodfill wouldn't get stuck so I had a dummy rows and columns surrounding the field.&lt;/p&gt;
+
+&lt;p&gt;X = Empty &lt;br&gt;
+O = Hay &lt;br&gt;
+Actual Field:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;X X X X
+
+X O O X
+
+X O X X
+
+X X X X  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;With Dummy Row and Columns:  &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;X X X X X X
+
+X X X X X X
+
+X X O O X X
+
+X X O X X X
+
+X X X X X X
+
+X X X X X X  
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It may seem a bit overkill here, but it was necessary if the borders were completely filled.&lt;/p&gt;
+
+&lt;p&gt;From there I just began at (0, 0), I started here because I knew that this cell had to be clear because it was part of my dummy rows and columns.&lt;/p&gt;
+
+&lt;p&gt;Then the floodfill just took care of the work. I just ensured to mark the ones that I had passed and moved on. If it hit a hay bale, it simply marked it and just checked how many sides were empty and added that to the overall perimeter.&lt;/p&gt;
+
+&lt;p&gt;And then the algorithm just took over.&lt;/p&gt;
+
+&lt;p&gt;This was my full solution:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;fstream&amp;gt;
+
+#define MAX_N 10000
+#define FIELD_SIZE 102
+
+/* N hay bales (1 &amp;lt;= N &amp;lt;= 10000)
+ * Field is a 100x100 grid
+ * E/a hay bale takes up 1x1
+ * All hay bales are connected in one mass
+ *
+ * Objective: Determine the perimeter that this mass creates.
+*/
+
+using namespace std;
+
+int N, field[FIELD_SIZE][FIELD_SIZE], visited[FIELD_SIZE][FIELD_SIZE], perimeter = 0;
+
+int numSurrounded(int x, int y) {  
+    return ((field[y-1][x] == 1) ? 1 : 0) + ((field[y+1][x] == 1) ? 1 : 0) + 
+        ((field[y][x+1] == 1) ? 1 : 0) + ((field[y][x+1] == 1) ? 1 : 0);
+}
+
+void checkCell(int x, int y) {  
+    if (visited[y][x] == 1) return;
+    if (field[y][x] == 0) {
+        visited[y][x] = 1;
+        if (y != 0) checkCell(x, y - 1);
+        if (y &amp;lt; FIELD_SIZE - 1) checkCell(x, y + 1);
+        if (x != 0) checkCell(x - 1, y);
+        if (x &amp;lt; FIELD_SIZE - 1) checkCell(x + 1, y);
+    } else {
+        cout &amp;lt;&amp;lt; x &amp;lt;&amp;lt; " " &amp;lt;&amp;lt; y &amp;lt;&amp;lt; endl;
+        perimeter++;    
+    }
+}
+
+void solve() {  
+    checkCell(0, 0);
+}
+
+int main() {  
+    int x, y;
+    ifstream fin("perimeter.in");
+        fin &amp;gt;&amp;gt; N;
+        for (int i = 0; i &amp;lt; N; i++) {
+            fin &amp;gt;&amp;gt; x &amp;gt;&amp;gt; y;
+            field[y][x] = 1;
+        }
+    fin.close();
+    solve();
+    ofstream fout("perimeter.out");
+        cout &amp;lt;&amp;lt; perimeter;
+        fout &amp;lt;&amp;lt; perimeter &amp;lt;&amp;lt; endl;
+    fout.close();   
+
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Brendan&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Progress: 12-27-14</title><description>&lt;p&gt;DECEMBER 27, 2014&lt;/p&gt;
+
+&lt;h2 id="todaysprogress"&gt;Today's Progress&lt;/h2&gt;
+
+&lt;p&gt;So, I am starting to realize how fast the deadline is approaching. I gotta pick up my game fast... Today animations were completed.&lt;/p&gt;
+
+&lt;h2 id="issues"&gt;Issues&lt;/h2&gt;
+
+&lt;p&gt;No issues to report today besides minor issue with alpha appearing as black when rendered by OpenGL. Fixed simply by enabling&lt;/p&gt;</description><link>http://localhost:2368/progress-12-27-14/</link><guid isPermaLink="false">745e1425-cf8d-457b-bfab-16122ecb94ca</guid><dc:creator>Brendan Horng</dc:creator><pubDate>Fri, 03 Jun 2016 00:44:56 GMT</pubDate><content:encoded>&lt;p&gt;DECEMBER 27, 2014&lt;/p&gt;
+
+&lt;h2 id="todaysprogress"&gt;Today's Progress&lt;/h2&gt;
+
+&lt;p&gt;So, I am starting to realize how fast the deadline is approaching. I gotta pick up my game fast... Today animations were completed.&lt;/p&gt;
+
+&lt;h2 id="issues"&gt;Issues&lt;/h2&gt;
+
+&lt;p&gt;No issues to report today besides minor issue with alpha appearing as black when rendered by OpenGL. Fixed simply by enabling OpenGL blending.&lt;/p&gt;
+
+&lt;p&gt;Collision still slightly bad, but we will work with it and move forward due to time restraints.&lt;/p&gt;
+
+&lt;h2 id="taskscompleted"&gt;Tasks Completed&lt;/h2&gt;
+
+&lt;p&gt;Today I:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Got rid of the annoying black behind our character&lt;/li&gt;
+&lt;li&gt;Did a couple quick fixes for the collision&lt;/li&gt;
+&lt;li&gt;Implemented animations&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="http://i.imgur.com/flr1J2f.gif" alt="Animations Demo."&gt;&lt;/p&gt;
+
+&lt;p&gt;Tomorrow I want to really make some progress. So I am setting the goal of doing dialog boxes and NPCs. And then we gotta make it such that we can begin to program our little character. But that will require making a menu too. This may be a bit ambitious. But we gotta move.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ludusamo&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Progress: 12-26-14</title><description>&lt;p&gt;DECEMBER 26, 2014&lt;/p&gt;
+
+&lt;h2 id="todaysprogress"&gt;Today's Progress&lt;/h2&gt;
+
+&lt;p&gt;Finally stopped being lazy enough to make some progress on this project. Today I moved along to implementing basic platforming elements. Our character is able to jump and walk around. Collision against the tiled map was also added.&lt;/p&gt;
+
+&lt;h2 id="issues"&gt;Issues&lt;/h2&gt;
+
+&lt;p&gt;Biggest issue today (and still is&lt;/p&gt;</description><link>http://localhost:2368/progress-12-26-14/</link><guid isPermaLink="false">b5fe92c4-45e7-461b-98ac-1aac02361360</guid><dc:creator>Brendan Horng</dc:creator><pubDate>Fri, 03 Jun 2016 00:44:13 GMT</pubDate><content:encoded>&lt;p&gt;DECEMBER 26, 2014&lt;/p&gt;
+
+&lt;h2 id="todaysprogress"&gt;Today's Progress&lt;/h2&gt;
+
+&lt;p&gt;Finally stopped being lazy enough to make some progress on this project. Today I moved along to implementing basic platforming elements. Our character is able to jump and walk around. Collision against the tiled map was also added.&lt;/p&gt;
+
+&lt;h2 id="issues"&gt;Issues&lt;/h2&gt;
+
+&lt;p&gt;Biggest issue today (and still is a small issue) is handling collision in such a way that allows the character to move separately on each axis.&lt;/p&gt;
+
+&lt;p&gt;However, the way I compensated was by moving the character to the spot where it wants to go, checking if it would collide with anything, and compensating from there. This resulted in me having to move it very close to the collision if it did end up colliding.&lt;/p&gt;
+
+&lt;p&gt;This works out very well... if you can only move in one axis at a time. But since I want the character to be able to move freely, an issue still arises is that, in the instance that the player collides in one axis, the other is being checked right after. So, while it is still clipped into the surface on one axis, it tries to move in the other axis causing it to unnecessarily compensate and "jump" to a "safe" spot.&lt;/p&gt;
+
+&lt;p&gt;Tomorrow's task is definitely to try and work this out as I don't want this to be around when I am moving forward.&lt;/p&gt;
+
+&lt;h2 id="taskscompleted"&gt;Tasks Completed&lt;/h2&gt;
+
+&lt;p&gt;On the bright side, we got a lot done today.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Collision is semi-working&lt;/li&gt;
+&lt;li&gt;Jumping is implemented&lt;/li&gt;
+&lt;li&gt;Basic platforming seems to work fine&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src="http://i.imgur.com/jPtp0GG.gif" alt="Platforming Demo."&gt;&lt;/p&gt;
+
+&lt;p&gt;Overall, today some good progress was made. Hopefully, if I can solve the last few collision kinks tomorrow, I will start adding animations.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Ludusamo&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Problem: Cow Crossings</title><description>&lt;p&gt;DECEMBER 26, 2014&lt;/p&gt;
+
+&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+
+&lt;p&gt;This is a &lt;a href="http://www.usaco.org/index.php?page=viewproblem2&amp;amp;cpid=242"&gt;link&lt;/a&gt; to the problem.&lt;/p&gt;
+
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;First task that I had to accomplish was to figure out how to determine if they were crossing or not. This ended up to be rather simple since their start and end Y positions are fixed. What it&lt;/p&gt;</description><link>http://localhost:2368/problem-cow-crossings/</link><guid isPermaLink="false">15fb50d4-d51b-44d6-a201-6e68910d079f</guid><dc:creator>Brendan Horng</dc:creator><pubDate>Fri, 03 Jun 2016 00:43:15 GMT</pubDate><content:encoded>&lt;p&gt;DECEMBER 26, 2014&lt;/p&gt;
+
+&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
+
+&lt;p&gt;This is a &lt;a href="http://www.usaco.org/index.php?page=viewproblem2&amp;amp;cpid=242"&gt;link&lt;/a&gt; to the problem.&lt;/p&gt;
+
+&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
+
+&lt;p&gt;First task that I had to accomplish was to figure out how to determine if they were crossing or not. This ended up to be rather simple since their start and end Y positions are fixed. What it turns out to be is that one cow's path must "surround" the other to be crossing.&lt;/p&gt;
+
+&lt;p&gt;So essentially: &lt;br&gt;
+Given a cow A with path (x1, x2) and cow B with path (x3, x4). They would cross if: &lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(x1 &amp;lt; x3 &amp;amp;&amp;amp; x2 &amp;gt; x4) // Essentially saying that A "surrounds" B
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;(x3 &amp;lt; x1 &amp;amp;&amp;amp; x4 &amp;gt; x2) // Also true if B surrounds A
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After establishing that, in order to simplify the problem, I ordered all of the cows based on their start positions in order. &lt;br&gt;
+What this accomplished was that I knew as I went along, all the cows prior to the one being checked would have their first value less than the current cow. This means I just had to check if there was a cow previous to it with a larger ending position in order for there to exist a cow that surrounds it. So, I simply kept track of the largest end position. If it was greater, than I knew that the cow would cross with a cow even if I didn't know which one.&lt;/p&gt;
+
+&lt;p&gt;If I left it here, then my solution would be wrong. There may be cases where a cow that would have crossed it hadn't occured yet. So I simply checked backwards as well. As I went forward I also kept a list of ones that I already checked off as not safe. Going backwards got all of the rest.&lt;/p&gt;
+
+&lt;p&gt;This was my full solution:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
+#include &amp;lt;fstream&amp;gt;
+#include &amp;lt;vector&amp;gt;
+#include &amp;lt;algorithm&amp;gt;
+#include &amp;lt;utility&amp;gt;
+
+#define pb push_back
+#define mp make_pair
+#define a first
+#define b second
+#define MAX_N = 100000
+
+/* N cows (1 &amp;lt;= N &amp;lt;= 100000)
+ * Road runs horizontally
+ * One sided described by y = 0; other by y = 1
+ * The cows will cross the road based on a_i and b_i which are their initial and final x positions
+ * 1M &amp;lt;= a_i, b_i &amp;lt;= 1M
+ * Cows are "safe" if their path does not intersect another cows's
+ *
+ * Objective: Count the number of safe cows.
+*/
+
+using namespace std;
+
+typedef pair&amp;lt;int, int&amp;gt; cow;  
+typedef vector&amp;lt;cow&amp;gt; VP;
+
+int N, output, checked[100000];  
+VP cows;
+
+bool compareCows(const cow &amp;amp;a, const cow &amp;amp;b) {  
+    return a.a &amp;lt; b.a;
+}
+
+void solve() {  
+    output = 0; 
+    int nSC = 0; // not safe cows
+    int maxB = -2000000;
+    for (int a = 1; a &amp;lt; N; a++) {
+        if (maxB &amp;gt;= cows[a].b) {
+            checked[a] = 1;
+                nSC++;  
+        }
+        maxB = (maxB &amp;gt; cows[a].b) ? maxB : cows[a].b;
+    }
+    int minB = 2000000; 
+    for (int a = N - 1; a &amp;gt;= 0; a--) {
+        if (minB &amp;lt;= cows[a].b &amp;amp;&amp;amp; checked[a] != 1) nSC++;    
+        minB = (minB &amp;lt; cows[a].b) ? minB : cows[a].b;
+    }
+    output = N - nSC;
+}
+
+int main() {  
+    ifstream fin("crossings.in");
+        fin &amp;gt;&amp;gt; N;
+        int a, b;
+        for (int i = 0; i &amp;lt; N; i++) {
+            fin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b;
+            cows.pb(mp(a, b));
+        }
+        sort(cows.begin(), cows.end(), compareCows);
+    fin.close();
+
+    solve();
+
+    ofstream fout("crossings.out");
+    fout &amp;lt;&amp;lt; output &amp;lt;&amp;lt; endl;
+    fout.close();
+    return 0;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Brendan&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item></channel></rss>

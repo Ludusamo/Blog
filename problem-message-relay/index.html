@@ -1,0 +1,262 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Problem: Message Relay</title>
+    <meta name="description" content="">
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <link rel="stylesheet" type="text/css" href="../assets/css/screen.css?v=e19f461a52">
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Merriweather:300,700,700italic,300italic%7COpen+Sans:700,400">
+
+    <link rel="canonical" href="index.html">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="amp/index.html">
+    
+    <meta property="og:site_name" content="Brendan's Blog">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Problem: Message Relay">
+    <meta property="og:description" content="DECEMBER 25, 2014 Introduction This is the one time that I will add an introduction as it is the first time I am doing this.  To help myself improve, I will be solving more USACO problems in hopes that I become good enough to start advancing. This blog will hopefully">
+    <meta property="og:url" content="http://localhost:2368/problem-message-relay/">
+    <meta property="article:published_time" content="2016-06-03T00:41:28.000Z">
+    <meta property="article:modified_time" content="2016-06-03T00:41:28.000Z">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Problem: Message Relay">
+    <meta name="twitter:description" content="DECEMBER 25, 2014 Introduction This is the one time that I will add an introduction as it is the first time I am doing this.  To help myself improve, I will be solving more USACO problems in hopes that I become good enough to start advancing. This blog will hopefully">
+    <meta name="twitter:url" content="http://localhost:2368/problem-message-relay/">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Brendan Horng">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Brendan&#x27;s Blog",
+        "logo": "http://localhost:2368/ghost/img/ghosticon.jpg"
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Brendan Horng",
+        "url": "http://localhost:2368/author/brendan/",
+        "sameAs": []
+    },
+    "headline": "Problem: Message Relay",
+    "url": "http://localhost:2368/problem-message-relay/",
+    "datePublished": "2016-06-03T00:41:28.000Z",
+    "dateModified": "2016-06-03T00:41:28.000Z",
+    "description": "DECEMBER 25, 2014 Introduction This is the one time that I will add an introduction as it is the first time I am doing this.  To help myself improve, I will be solving more USACO problems in hopes that I become good enough to start advancing. This blog will hopefully",
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "http://localhost:2368"
+    }
+}
+    </script>
+
+    <meta name="generator" content="Ghost 0.11">
+    <link rel="alternate" type="application/rss+xml" title="Brendan's Blog" href="../rss/index.html">
+    <script>
+var disqus_shortname = 'ludusamo';
+</script>
+</head>
+<body class="post-template nav-closed">
+
+    <div class="nav">
+    <h3 class="nav-title">Menu</h3>
+    <a href="index.html#" class="nav-close">
+        <span class="hidden">Close</span>
+    </a>
+    <ul>
+            <li class="nav-main-site" role="presentation"><a href="http://ludusamo.com">Main Site</a></li>
+            <li class="nav-resume" role="presentation"><a href="http://ludusamo.com/Resume">Resume</a></li>
+    </ul>
+        <a class="subscribe-button icon-feed" href="../rss/index.rss">Subscribe</a>
+</div>
+<span class="nav-cover"></span>
+
+
+    <div class="site-wrapper">
+
+        
+
+
+<header class="main-header post-head no-cover">
+    <nav class="main-nav  clearfix">
+        
+            <a class="menu-button icon-menu" href="index.html#"><span class="word">Menu</span></a>
+    </nav>
+</header>
+
+<main class="content" role="main">
+    <article class="post">
+
+        <header class="post-header">
+            <h1 class="post-title">Problem: Message Relay</h1>
+            <section class="post-meta">
+                <time class="post-date" datetime="2016-06-03">03 June 2016</time> 
+            </section>
+        </header>
+
+        <section class="post-content">
+            <p>DECEMBER 25, 2014</p>
+
+<h2 id="introduction">Introduction</h2>
+
+<p>This is the one time that I will add an introduction as it is the first time I am doing this. <br>
+To help myself improve, I will be solving more USACO problems in hopes that I become good enough to start advancing. This blog will hopefully motivate me to keep practicing problems. I will be doing problems either on the training pages or from past competitions.</p>
+
+<h2 id="problem">Problem</h2>
+
+<p>This is a <a href="http://www.usaco.org/index.php?page=viewproblem2&amp;cpid=241">link</a> to the problem.</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>This problem was fairly straight forward. I could simply just loop through the number of cows and follow their message paths to determine whether it was going to be forced into a loop. If the number of steps taken (number of times message is forwarded) exceeds N, then I would know that the cow was loopy. There are definitely more elegant ways of completing the problem. However, since N can't exceed 1000, and with this solution the worst case is just O(N^2), I could just brute force it like this.</p>
+
+<p>This was my full solution:  </p>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+#include &lt;algorithm&gt;
+#include &lt;vector&gt;
+#include &lt;utility&gt;
+
+#define pb push_back
+
+// N cows (1 &lt;= N &lt;= 1000)
+// Communication with tin cans
+// Each cow can forward message to at most 1 cow
+// Cow i; F(i) = (cow that i forwards to)
+// if F(i) = 0; i cannot forward messages
+// cow = loopy if message gets stuck in loop
+// want to avoid loopy cows
+//
+// Objective: Count number of none loopy cows.
+//
+// Strategy: Vector keeping track of all the cows, who they forward to
+//         and if they are loopy or not. 
+
+using namespace std;
+
+typedef vector&lt;int&gt; VI;
+
+int N, output;  
+VI cows;
+
+bool checkBranch(int i) {  
+    int currentCow = i;
+    int numSteps = 0;
+    while (numSteps &lt;= N) {
+        cout &lt;&lt; i &lt;&lt; " " &lt;&lt; cows[i] &lt;&lt; endl;
+        if (cows[i] == -1) return true;
+        i = cows[i];
+        numSteps++;
+    }
+    return false;
+}
+
+void solve() {  
+    for (int i = 0; i &lt; N; i++) {
+        cout &lt;&lt; i &lt;&lt; endl;
+        if (checkBranch(i)) output++;   
+        cout &lt;&lt; endl;
+    }       
+}
+
+int main() {  
+    ifstream fin("relay.in");   
+    fin &gt;&gt; N;
+    int buffer;
+    for (int i = 0; i &lt; N; i++) {
+        fin &gt;&gt; buffer;  
+        buffer -= 1;
+        cows.pb(buffer);
+    }
+    fin.close();    
+    solve();
+
+    ofstream fout("relay.out");
+    fout &lt;&lt; output &lt;&lt; endl;
+    fout.close();
+    return 0;
+}
+</code></pre>
+
+<ul>
+<li>Brendan</li>
+</ul>
+        </section>
+
+        <footer class="post-footer">
+
+
+
+            <section class="author">
+                <h4><a href="../author/brendan/">Brendan Horng</a></h4>
+
+                    <p>Read <a href="../author/brendan/">more posts</a> by this author.</p>
+                <div class="author-meta">
+                    
+                    
+                </div>
+            </section>
+
+
+            <section class="share">
+                <h4>Share this post</h4>
+                <a class="icon-twitter" href="https://twitter.com/intent/tweet?text=Problem%3A%20Message%20Relay&amp;url=http://localhost:2368/problem-message-relay/" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <span class="hidden">Twitter</span>
+                </a>
+                <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u=http://localhost:2368/problem-message-relay/" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <span class="hidden">Facebook</span>
+                </a>
+                <a class="icon-google-plus" href="https://plus.google.com/share?url=http://localhost:2368/problem-message-relay/" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <span class="hidden">Google+</span>
+                </a>
+            </section>
+
+
+        </footer>
+
+    </article>
+</main>
+
+<aside class="read-next">
+    <a class="read-next-story no-cover" href="../problem-cow-crossings/">
+        <section class="post">
+            <h2>Problem: Cow Crossings</h2>
+            <p>DECEMBER 26, 2014 Problem This is a link to the problem. Solution First task that I had to accomplish…</p>
+        </section>
+    </a>
+    <a class="read-next-story prev no-cover" href="../merry-christmas/">
+        <section class="post">
+            <h2>Merry Christmas!</h2>
+            <p>DECEMBER 25, 2014 Happy Holidays Everyone! Today started out as a pretty nice day with nice weather, but it…</p>
+        </section>
+    </a>
+</aside>
+
+
+
+        <footer class="site-footer clearfix">
+            <section class="copyright"><a href="../">Brendan's Blog</a> © 2016</section>
+            <section class="poweredby">Proudly published with <a href="https://ghost.org">Ghost</a></section>
+        </footer>
+
+    </div>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+<script type="text/javascript" src="https://npmcdn.com/imagesloaded@4.1/imagesloaded.pkgd.min.js"></script>
+<script type="text/javascript" src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>
+    <script type="text/javascript" src="../assets/js/jquery.fitvids.js?v=e19f461a52"></script>
+    <script type="text/javascript" src="../assets/js/index.js?v=e19f461a52"></script>
+
+</body>
