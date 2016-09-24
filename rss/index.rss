@@ -1,4 +1,45 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Brendan's Blog</title><description>Programming, engineering, and general rambling.</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Tue, 20 Sep 2016 02:47:24 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Arduino Libraries: Timer</title><description>&lt;h1 id="arduinolibraries"&gt;Arduino Libraries&lt;/h1&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Brendan's Blog</title><description>Programming, engineering, and general rambling.</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sat, 24 Sep 2016 01:25:41 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Refocusing my Language</title><description>&lt;h1 id="toylanguageupdate"&gt;Toy Language Update&lt;/h1&gt;
+
+&lt;p&gt;I recently released version 0.17.0 of my Toy Language. The release occurred right before school began (it is my first year of college), so I decided to take a little break from it.&lt;/p&gt;
+
+&lt;p&gt;During these past few weeks, while I did some bug fixing and&lt;/p&gt;</description><link>http://localhost:2368/refocusing-my-language/</link><guid isPermaLink="false">4752d32e-8e07-4bc3-993e-b26267c919a0</guid><category>Programming</category><category>Open Source</category><category>Project</category><category>C</category><category>Programming Language</category><category>Compiler</category><dc:creator>Brendan Horng</dc:creator><pubDate>Sat, 24 Sep 2016 00:25:32 GMT</pubDate><content:encoded>&lt;h1 id="toylanguageupdate"&gt;Toy Language Update&lt;/h1&gt;
+
+&lt;p&gt;I recently released version 0.17.0 of my Toy Language. The release occurred right before school began (it is my first year of college), so I decided to take a little break from it.&lt;/p&gt;
+
+&lt;p&gt;During these past few weeks, while I did some bug fixing and testing, development has been slow. This gave me a lot of time to think. Think about what direction this language is headed.&lt;/p&gt;
+
+&lt;h2 id="realization"&gt;Realization&lt;/h2&gt;
+
+&lt;p&gt;I realized that I am slowly losing sight of the reason that I began to write this language in the first place. Well ok, there are admittedly two reasons:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;I wanted to learn how compilers work.  &lt;/li&gt;
+&lt;li&gt;I wanted a replacement for a scripting language in my workflow that was entirely my own.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I want to concentrate on that second point. I am losing sight of the fact that I want to make a &lt;strong&gt;scripting&lt;/strong&gt; language.&lt;/p&gt;
+
+&lt;p&gt;I realized that I am spending far too much time pondering design decisions that are far too out of scope for what I had originally set out to do. I am trying to create a language that fits more functions than it was originally conceptualized for. And thats bad. My scope is &lt;strong&gt;TOO DAMN BIG&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id="timetoreignitin"&gt;Time to Reign it In&lt;/h2&gt;
+
+&lt;p&gt;Going forward I have decided on a few things in no particular order:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;This language is a &lt;strong&gt;scripting&lt;/strong&gt; language. Whether it can be a standalone or not will just be a nice side effect.  &lt;/li&gt;
+&lt;li&gt;The primary goal of this &lt;strong&gt;scripting&lt;/strong&gt; language is to be small and fast.  &lt;/li&gt;
+&lt;li&gt;Everything will be an Object. I spent too much time trying to separate values, primitives, and objects. No more. Everything will be simpler and modular if I just make everything an object.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id="conclusion"&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;While substancial progress has been made (in fact I am really proud of my progress), I kind of let this project go a little too wild. I need to decide on what I want to do, keep it small, and complete it. &lt;strong&gt;Then I can add on to it.&lt;/strong&gt; Lessons that I clearly did not learn from.&lt;/p&gt;
+
+&lt;p&gt;Anyway, that's all for now.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Brendan&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Arduino Libraries: Timer</title><description>&lt;h1 id="arduinolibraries"&gt;Arduino Libraries&lt;/h1&gt;
 
 &lt;p&gt;I decided to create my own repository filled with libraries/utilities for Arduino that I would find useful. You can find the repository &lt;a href="https://github.com/Ludusamo/ArduinoLibraries"&gt;here&lt;/a&gt;. As a first entry, I find myself always implementing a timer in various projects, so I decided to write a standard one.&lt;/p&gt;
 
@@ -571,113 +612,4 @@ int main() {
 
 &lt;ul&gt;
 &lt;li&gt;Ludusamo&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title>Problem: Cow Crossings</title><description>&lt;p&gt;DECEMBER 26, 2014&lt;/p&gt;
-
-&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
-
-&lt;p&gt;This is a &lt;a href="http://www.usaco.org/index.php?page=viewproblem2&amp;amp;cpid=242"&gt;link&lt;/a&gt; to the problem.&lt;/p&gt;
-
-&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
-
-&lt;p&gt;First task that I had to accomplish was to figure out how to determine if they were crossing or not. This ended up to be rather simple since their start and end Y positions are fixed. What it&lt;/p&gt;</description><link>http://localhost:2368/problem-cow-crossings/</link><guid isPermaLink="false">15fb50d4-d51b-44d6-a201-6e68910d079f</guid><dc:creator>Brendan Horng</dc:creator><pubDate>Fri, 03 Jun 2016 00:43:15 GMT</pubDate><content:encoded>&lt;p&gt;DECEMBER 26, 2014&lt;/p&gt;
-
-&lt;h2 id="problem"&gt;Problem&lt;/h2&gt;
-
-&lt;p&gt;This is a &lt;a href="http://www.usaco.org/index.php?page=viewproblem2&amp;amp;cpid=242"&gt;link&lt;/a&gt; to the problem.&lt;/p&gt;
-
-&lt;h2 id="solution"&gt;Solution&lt;/h2&gt;
-
-&lt;p&gt;First task that I had to accomplish was to figure out how to determine if they were crossing or not. This ended up to be rather simple since their start and end Y positions are fixed. What it turns out to be is that one cow's path must "surround" the other to be crossing.&lt;/p&gt;
-
-&lt;p&gt;So essentially: &lt;br&gt;
-Given a cow A with path (x1, x2) and cow B with path (x3, x4). They would cross if: &lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;(x1 &amp;lt; x3 &amp;amp;&amp;amp; x2 &amp;gt; x4) // Essentially saying that A "surrounds" B
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;pre&gt;&lt;code&gt;(x3 &amp;lt; x1 &amp;amp;&amp;amp; x4 &amp;gt; x2) // Also true if B surrounds A
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;After establishing that, in order to simplify the problem, I ordered all of the cows based on their start positions in order. &lt;br&gt;
-What this accomplished was that I knew as I went along, all the cows prior to the one being checked would have their first value less than the current cow. This means I just had to check if there was a cow previous to it with a larger ending position in order for there to exist a cow that surrounds it. So, I simply kept track of the largest end position. If it was greater, than I knew that the cow would cross with a cow even if I didn't know which one.&lt;/p&gt;
-
-&lt;p&gt;If I left it here, then my solution would be wrong. There may be cases where a cow that would have crossed it hadn't occured yet. So I simply checked backwards as well. As I went forward I also kept a list of ones that I already checked off as not safe. Going backwards got all of the rest.&lt;/p&gt;
-
-&lt;p&gt;This was my full solution:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;#include &amp;lt;iostream&amp;gt;
-#include &amp;lt;fstream&amp;gt;
-#include &amp;lt;vector&amp;gt;
-#include &amp;lt;algorithm&amp;gt;
-#include &amp;lt;utility&amp;gt;
-
-#define pb push_back
-#define mp make_pair
-#define a first
-#define b second
-#define MAX_N = 100000
-
-/* N cows (1 &amp;lt;= N &amp;lt;= 100000)
- * Road runs horizontally
- * One sided described by y = 0; other by y = 1
- * The cows will cross the road based on a_i and b_i which are their initial and final x positions
- * 1M &amp;lt;= a_i, b_i &amp;lt;= 1M
- * Cows are "safe" if their path does not intersect another cows's
- *
- * Objective: Count the number of safe cows.
-*/
-
-using namespace std;
-
-typedef pair&amp;lt;int, int&amp;gt; cow;  
-typedef vector&amp;lt;cow&amp;gt; VP;
-
-int N, output, checked[100000];  
-VP cows;
-
-bool compareCows(const cow &amp;amp;a, const cow &amp;amp;b) {  
-    return a.a &amp;lt; b.a;
-}
-
-void solve() {  
-    output = 0; 
-    int nSC = 0; // not safe cows
-    int maxB = -2000000;
-    for (int a = 1; a &amp;lt; N; a++) {
-        if (maxB &amp;gt;= cows[a].b) {
-            checked[a] = 1;
-                nSC++;  
-        }
-        maxB = (maxB &amp;gt; cows[a].b) ? maxB : cows[a].b;
-    }
-    int minB = 2000000; 
-    for (int a = N - 1; a &amp;gt;= 0; a--) {
-        if (minB &amp;lt;= cows[a].b &amp;amp;&amp;amp; checked[a] != 1) nSC++;    
-        minB = (minB &amp;lt; cows[a].b) ? minB : cows[a].b;
-    }
-    output = N - nSC;
-}
-
-int main() {  
-    ifstream fin("crossings.in");
-        fin &amp;gt;&amp;gt; N;
-        int a, b;
-        for (int i = 0; i &amp;lt; N; i++) {
-            fin &amp;gt;&amp;gt; a &amp;gt;&amp;gt; b;
-            cows.pb(mp(a, b));
-        }
-        sort(cows.begin(), cows.end(), compareCows);
-    fin.close();
-
-    solve();
-
-    ofstream fout("crossings.out");
-    fout &amp;lt;&amp;lt; output &amp;lt;&amp;lt; endl;
-    fout.close();
-    return 0;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Brendan&lt;/li&gt;
 &lt;/ul&gt;</content:encoded></item></channel></rss>
