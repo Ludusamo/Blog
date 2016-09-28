@@ -1,4 +1,28 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Brendan's Blog</title><description>Programming, engineering, and general rambling.</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sat, 24 Sep 2016 01:25:41 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Refocusing my Language</title><description>&lt;h1 id="toylanguageupdate"&gt;Toy Language Update&lt;/h1&gt;
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/" version="2.0"><channel><title>Brendan's Blog</title><description>Programming, engineering, and general rambling.</description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Wed, 28 Sep 2016 21:51:37 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title>Let's Learn Functional Programming!</title><description>&lt;h1 id="learningfunctionalprogramming"&gt;Learning Functional Programming&lt;/h1&gt;
+
+&lt;p&gt;I decided to start learning a functional language.&lt;/p&gt;
+
+&lt;p&gt;It's a buzzword that I keep hearing and the fact of the matter is that I don't really understand what it is. I know its rooted in lambda calculus, I know that you use a lot of functions and&lt;/p&gt;</description><link>http://localhost:2368/lea/</link><guid isPermaLink="false">3674d918-8b4a-44c1-a8c1-6155a80cba1a</guid><dc:creator>Brendan Horng</dc:creator><pubDate>Wed, 28 Sep 2016 21:51:25 GMT</pubDate><content:encoded>&lt;h1 id="learningfunctionalprogramming"&gt;Learning Functional Programming&lt;/h1&gt;
+
+&lt;p&gt;I decided to start learning a functional language.&lt;/p&gt;
+
+&lt;p&gt;It's a buzzword that I keep hearing and the fact of the matter is that I don't really understand what it is. I know its rooted in lambda calculus, I know that you use a lot of functions and recursions, and I know it prevents "side effects".&lt;/p&gt;
+
+&lt;p&gt;But I could not tell someone exactly what it is or explain it. And so I figured that should change.&lt;/p&gt;
+
+&lt;h2 id="goingforward"&gt;Going Forward&lt;/h2&gt;
+
+&lt;p&gt;I decided to learn Lisp (because why not). As to what "kind" of Lisp, I am not educated enough to decide, so I will just be using Common Lisp.&lt;/p&gt;
+
+&lt;p&gt;I will probably be working through Project Euler problems to help myself learn. And I might even livestream the process. We'll see what happens.&lt;/p&gt;
+
+&lt;p&gt;Livestreaming is something I have always wanted to try, and it might keep me motivated. So, maybe I'll give it a shot.&lt;/p&gt;
+
+&lt;p&gt;That's all for now.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Brendan&lt;/li&gt;
+&lt;/ul&gt;</content:encoded></item><item><title>Refocusing my Language</title><description>&lt;h1 id="toylanguageupdate"&gt;Toy Language Update&lt;/h1&gt;
 
 &lt;p&gt;I recently released version 0.17.0 of my Toy Language. The release occurred right before school began (it is my first year of college), so I decided to take a little break from it.&lt;/p&gt;
 
@@ -569,46 +593,6 @@ int main() {
 &lt;p&gt;&lt;img src="http://i.imgur.com/flr1J2f.gif" alt="Animations Demo."&gt;&lt;/p&gt;
 
 &lt;p&gt;Tomorrow I want to really make some progress. So I am setting the goal of doing dialog boxes and NPCs. And then we gotta make it such that we can begin to program our little character. But that will require making a menu too. This may be a bit ambitious. But we gotta move.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Ludusamo&lt;/li&gt;
-&lt;/ul&gt;</content:encoded></item><item><title>Progress: 12-26-14</title><description>&lt;p&gt;DECEMBER 26, 2014&lt;/p&gt;
-
-&lt;h2 id="todaysprogress"&gt;Today's Progress&lt;/h2&gt;
-
-&lt;p&gt;Finally stopped being lazy enough to make some progress on this project. Today I moved along to implementing basic platforming elements. Our character is able to jump and walk around. Collision against the tiled map was also added.&lt;/p&gt;
-
-&lt;h2 id="issues"&gt;Issues&lt;/h2&gt;
-
-&lt;p&gt;Biggest issue today (and still is&lt;/p&gt;</description><link>http://localhost:2368/progress-12-26-14/</link><guid isPermaLink="false">b5fe92c4-45e7-461b-98ac-1aac02361360</guid><dc:creator>Brendan Horng</dc:creator><pubDate>Fri, 03 Jun 2016 00:44:13 GMT</pubDate><content:encoded>&lt;p&gt;DECEMBER 26, 2014&lt;/p&gt;
-
-&lt;h2 id="todaysprogress"&gt;Today's Progress&lt;/h2&gt;
-
-&lt;p&gt;Finally stopped being lazy enough to make some progress on this project. Today I moved along to implementing basic platforming elements. Our character is able to jump and walk around. Collision against the tiled map was also added.&lt;/p&gt;
-
-&lt;h2 id="issues"&gt;Issues&lt;/h2&gt;
-
-&lt;p&gt;Biggest issue today (and still is a small issue) is handling collision in such a way that allows the character to move separately on each axis.&lt;/p&gt;
-
-&lt;p&gt;However, the way I compensated was by moving the character to the spot where it wants to go, checking if it would collide with anything, and compensating from there. This resulted in me having to move it very close to the collision if it did end up colliding.&lt;/p&gt;
-
-&lt;p&gt;This works out very well... if you can only move in one axis at a time. But since I want the character to be able to move freely, an issue still arises is that, in the instance that the player collides in one axis, the other is being checked right after. So, while it is still clipped into the surface on one axis, it tries to move in the other axis causing it to unnecessarily compensate and "jump" to a "safe" spot.&lt;/p&gt;
-
-&lt;p&gt;Tomorrow's task is definitely to try and work this out as I don't want this to be around when I am moving forward.&lt;/p&gt;
-
-&lt;h2 id="taskscompleted"&gt;Tasks Completed&lt;/h2&gt;
-
-&lt;p&gt;On the bright side, we got a lot done today.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Collision is semi-working&lt;/li&gt;
-&lt;li&gt;Jumping is implemented&lt;/li&gt;
-&lt;li&gt;Basic platforming seems to work fine&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;img src="http://i.imgur.com/jPtp0GG.gif" alt="Platforming Demo."&gt;&lt;/p&gt;
-
-&lt;p&gt;Overall, today some good progress was made. Hopefully, if I can solve the last few collision kinks tomorrow, I will start adding animations.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Ludusamo&lt;/li&gt;
