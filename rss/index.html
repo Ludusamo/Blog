@@ -1,0 +1,621 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Brendan's Blog]]></title><description><![CDATA[Programming, engineering, and general rambling.]]></description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Tue, 06 Dec 2016 05:08:59 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Side Project: Genetic Algorithms]]></title><description><![CDATA[<h1 id="geneticalgorithmsandstardewvalley">Genetic Algorithms and Stardew Valley</h1>
+
+<p>So, I have had a long held interest in Artificial Intelligence. However, due to my own inadequacy and laziness, I never really got very far into implementing much of anything that could be in the realm of artificial intelligence. But, I wish to begin some</p>]]></description><link>http://localhost:2368/side-project-genetic-algorithms/</link><guid isPermaLink="false">7e201296-b3d1-45aa-bdd3-ff07b01d691d</guid><category><![CDATA[Programming]]></category><category><![CDATA[Project]]></category><category><![CDATA[Genetic Algorithm]]></category><category><![CDATA[Stardew Valley]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Tue, 06 Dec 2016 05:05:33 GMT</pubDate><content:encoded><![CDATA[<h1 id="geneticalgorithmsandstardewvalley">Genetic Algorithms and Stardew Valley</h1>
+
+<p>So, I have had a long held interest in Artificial Intelligence. However, due to my own inadequacy and laziness, I never really got very far into implementing much of anything that could be in the realm of artificial intelligence. But, I wish to begin some more now with Genetic Algorithms.</p>
+
+<h2 id="initialconcept">Initial Concept</h2>
+
+<p>I originally thought of this idea as I was reading into genetic algorithms on this <a href="http://www.ai-junkie.com/ga/intro/gat1.html">page</a> about a year ago. This page put it into very understandable terms and allowed me to begin thinking about where this principle could be applied.</p>
+
+<p>This was also around the time that I started playing a game called <a href="http://stardewvalley.net/">Stardew Valley</a>.</p>
+
+<p><img src="http://cdn.akamai.steamstatic.com/steam/apps/413150/header.jpg?t=1469816833" alt="Stardew Valley Image"></p>
+
+<p>This game is a farm life simulator with Zelda-like elements etc. I will let you look into reviews of the game if you are interested. What is more pertinent is the farming part of this game.</p>
+
+<h3 id="sprinklers">Sprinklers</h3>
+
+<p>In the game, you are to plant crops and water them daily in order to make money. Watering them every day takes energy out of your character, and energy is an important resource. Luckily, there are these items called sprinklers:</p>
+
+<p><img src="http://stardewvalleywiki.com/mediawiki/images/thumb/a/ac/Sprinkler_Range.png/600px-Sprinkler_Range.png" alt="Sprinklers"></p>
+
+<p>As shown in the image, there are three types of sprinklers. They increase in cost of production rather drastically. So, the problem I encountered was that, in the early game, I was able to get a lot of the most basic sprinkler (the left most one). However, it has a less clean pattern (for a tile based game) than the other two. So, it was not immediately obvious to me what would be the best way to tile these in an optimal way given that they would need to fit into a space where a scarecrow can protect them (keeps crops from being destroyed). The radius and shape of a scarecrow looks like this:</p>
+
+<p><img src="http://stardewvalleywiki.com/mediawiki/images/thumb/f/f9/Scarecrow_Range.png/500px-Scarecrow_Range.png" alt="Scarecrow"></p>
+
+<p>Now, this problem can be easily brute forced with some minor trial and error and good old pen and paper. However, I began wondering if I could write an algorithm to find the optimal layout. Then I realized that a genetic algorithm might work rather nicely here.</p>
+
+<h2 id="timetodoasideproject">Time to do a Side Project!</h2>
+
+<p>Fast forward to today. So, ever since college began, I have been lamenting that I have not had enough time to do my own programming. So, I decided that over my winter break I would take this concept and bring it to life. I hope to be able to write a genetic algorithm that can solve this problem of finding the optimal layout of sprinklers in order to fit the range of a single scarecrow.</p>
+
+<p>Some details that I have already thought of:</p>
+
+<h3 id="fitnessfunction">Fitness Function</h3>
+
+<p>Can be defined as initially just the total number of tiles that are watered in the area of the scarecrow. This gives us a very simple and quantifiable metric to judge "chromosomes"/"organisms" in the algorithm.</p>
+
+<p>I may later want to extend the fitness function to check whether the entire space can be traversed. This is important because in the game, if I cannot traverse to it, the tile would be useless. </p>
+
+<p>I may also later extend this to check if the design is tilable and prioritize designs that can be tiled.</p>
+
+<h3 id="encodinganddecoding">Encoding and Decoding</h3>
+
+<p>Encoding and decoding for now will simply be to an array of 1s and 0s (maybe bits of an int even I'm not sure yet). A 1 will denote a sprinkler being there while a 0 will denote no sprinkler.</p>
+
+<h3 id="ui">UI</h3>
+
+<p>After the core functionality is there, I hope to add a UI to this program in order to visualize the best species at any point in time. The UI will also allow monitoring and data feedback. I also hope to include a graph in there and a place to change configuration values of the algorithm.</p>
+
+<h2 id="finalwords">Final Words</h2>
+
+<p>Overall, I think it will be a fun little project. I can make good use of it. Most of all, I believe the scope is doable (perhaps not the UI, we will see) for the duration of my winter break.</p>
+
+<p>Well, I will keep updates on the progress of it, but I hope this becomes a fruitful project.</p>
+
+<ul>
+<li>Brendan</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[Let's Learn Functional Programming!]]></title><description><![CDATA[<h1 id="learningfunctionalprogramming">Learning Functional Programming</h1>
+
+<p>I decided to start learning a functional language.</p>
+
+<p>It's a buzzword that I keep hearing and the fact of the matter is that I don't really understand what it is. I know its rooted in lambda calculus, I know that you use a lot of functions and</p>]]></description><link>http://localhost:2368/lea/</link><guid isPermaLink="false">3674d918-8b4a-44c1-a8c1-6155a80cba1a</guid><category><![CDATA[Programming]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Wed, 28 Sep 2016 21:51:25 GMT</pubDate><content:encoded><![CDATA[<h1 id="learningfunctionalprogramming">Learning Functional Programming</h1>
+
+<p>I decided to start learning a functional language.</p>
+
+<p>It's a buzzword that I keep hearing and the fact of the matter is that I don't really understand what it is. I know its rooted in lambda calculus, I know that you use a lot of functions and recursions, and I know it prevents "side effects".</p>
+
+<p>But I could not tell someone exactly what it is or explain it. And so I figured that should change.</p>
+
+<h2 id="goingforward">Going Forward</h2>
+
+<p>I decided to learn Lisp (because why not). As to what "kind" of Lisp, I am not educated enough to decide, so I will just be using Common Lisp.</p>
+
+<p>I will probably be working through Project Euler problems to help myself learn. And I might even livestream the process. We'll see what happens.</p>
+
+<p>Livestreaming is something I have always wanted to try, and it might keep me motivated. So, maybe I'll give it a shot.</p>
+
+<p>That's all for now.</p>
+
+<ul>
+<li>Brendan</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[Refocusing my Language]]></title><description><![CDATA[<h1 id="toylanguageupdate">Toy Language Update</h1>
+
+<p>I recently released version 0.17.0 of my Toy Language. The release occurred right before school began (it is my first year of college), so I decided to take a little break from it.</p>
+
+<p>During these past few weeks, while I did some bug fixing and</p>]]></description><link>http://localhost:2368/refocusing-my-language/</link><guid isPermaLink="false">4752d32e-8e07-4bc3-993e-b26267c919a0</guid><category><![CDATA[Programming]]></category><category><![CDATA[Open Source]]></category><category><![CDATA[Project]]></category><category><![CDATA[C]]></category><category><![CDATA[Programming Language]]></category><category><![CDATA[Compiler]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Sat, 24 Sep 2016 00:25:32 GMT</pubDate><content:encoded><![CDATA[<h1 id="toylanguageupdate">Toy Language Update</h1>
+
+<p>I recently released version 0.17.0 of my Toy Language. The release occurred right before school began (it is my first year of college), so I decided to take a little break from it.</p>
+
+<p>During these past few weeks, while I did some bug fixing and testing, development has been slow. This gave me a lot of time to think. Think about what direction this language is headed.</p>
+
+<h2 id="realization">Realization</h2>
+
+<p>I realized that I am slowly losing sight of the reason that I began to write this language in the first place. Well ok, there are admittedly two reasons:</p>
+
+<ol>
+<li>I wanted to learn how compilers work.  </li>
+<li>I wanted a replacement for a scripting language in my workflow that was entirely my own.</li>
+</ol>
+
+<p>I want to concentrate on that second point. I am losing sight of the fact that I want to make a <strong>scripting</strong> language.</p>
+
+<p>I realized that I am spending far too much time pondering design decisions that are far too out of scope for what I had originally set out to do. I am trying to create a language that fits more functions than it was originally conceptualized for. And thats bad. My scope is <strong>TOO DAMN BIG</strong>.</p>
+
+<h2 id="timetoreignitin">Time to Reign it In</h2>
+
+<p>Going forward I have decided on a few things in no particular order:</p>
+
+<ol>
+<li>This language is a <strong>scripting</strong> language. Whether it can be a standalone or not will just be a nice side effect.  </li>
+<li>The primary goal of this <strong>scripting</strong> language is to be small and fast.  </li>
+<li>Everything will be an Object. I spent too much time trying to separate values, primitives, and objects. No more. Everything will be simpler and modular if I just make everything an object.</li>
+</ol>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>While substancial progress has been made (in fact I am really proud of my progress), I kind of let this project go a little too wild. I need to decide on what I want to do, keep it small, and complete it. <strong>Then I can add on to it.</strong> Lessons that I clearly did not learn from.</p>
+
+<p>Anyway, that's all for now.</p>
+
+<ul>
+<li>Brendan</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[Arduino Libraries: Timer]]></title><description><![CDATA[<h1 id="arduinolibraries">Arduino Libraries</h1>
+
+<p>I decided to create my own repository filled with libraries/utilities for Arduino that I would find useful. You can find the repository <a href="https://github.com/Ludusamo/ArduinoLibraries">here</a>. As a first entry, I find myself always implementing a timer in various projects, so I decided to write a standard one.</p>
+
+<h1 id="timer">Timer</h1>
+
+<p>To</p>]]></description><link>http://localhost:2368/arduino-libraries-timer/</link><guid isPermaLink="false">f610ed44-f27b-4c25-a4c3-6db7e20bf931</guid><category><![CDATA[Programming]]></category><category><![CDATA[Arduino]]></category><category><![CDATA[C++]]></category><category><![CDATA[Library]]></category><category><![CDATA[Timer]]></category><category><![CDATA[Github]]></category><category><![CDATA[Open Source]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Sun, 10 Jul 2016 01:03:35 GMT</pubDate><content:encoded><![CDATA[<h1 id="arduinolibraries">Arduino Libraries</h1>
+
+<p>I decided to create my own repository filled with libraries/utilities for Arduino that I would find useful. You can find the repository <a href="https://github.com/Ludusamo/ArduinoLibraries">here</a>. As a first entry, I find myself always implementing a timer in various projects, so I decided to write a standard one.</p>
+
+<h1 id="timer">Timer</h1>
+
+<p>To be honest, its not like it takes very long to implement one of these, but I still really shouldn't be wasting time rewriting this anytime I need one. The timer is very simple and will work until the <code>millis()</code> function in Arduino wraps around itself (~50 days according to the <a href="https://www.arduino.cc/en/Reference/Millis">Arduino website</a>). The timer automatically starts as soon as it is instantiated and can be reset with a <code>reset()</code> function. If you would like to see further examples and or the source code, feel free to take a look at the library on my <a href="https://github.com/Ludusamo/ArduinoLibraries/tree/master/Timer">Github</a>.</p>
+
+<ul>
+<li>Brendan</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[Fractal Tree Generation in Mathematica]]></title><description><![CDATA[<p>JUNE 14, 2016</p>
+
+<h1 id="why">Why</h1>
+
+<p>This was a project done for my Multivariable Calculus course. I wanted to share the final product of my efforts so here it is.</p>
+
+<h1 id="sampleoutputs">Sample Outputs</h1>
+
+<p><img src="http://i.imgur.com/8sxYhsS.png" alt="Sample 1">
+<img src="http://i.imgur.com/e79WWu6.png" alt="Sample 2"></p>
+
+<h1 id="projectfiles">Project Files</h1>
+
+<p>If you would like to read more about what I did for this project, you should visit it's</p>]]></description><link>http://localhost:2368/fractal-tree-generation-in-mathematica/</link><guid isPermaLink="false">b446f04f-7bda-4fc5-871e-995cb7556bc7</guid><category><![CDATA[Programming]]></category><category><![CDATA[Project]]></category><category><![CDATA[Mathematica]]></category><category><![CDATA[School]]></category><category><![CDATA[Fractals]]></category><category><![CDATA[Generation]]></category><category><![CDATA[Trees]]></category><category><![CDATA[Fractal Trees]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Wed, 15 Jun 2016 00:42:57 GMT</pubDate><content:encoded><![CDATA[<p>JUNE 14, 2016</p>
+
+<h1 id="why">Why</h1>
+
+<p>This was a project done for my Multivariable Calculus course. I wanted to share the final product of my efforts so here it is.</p>
+
+<h1 id="sampleoutputs">Sample Outputs</h1>
+
+<p><img src="http://i.imgur.com/8sxYhsS.png" alt="Sample 1">
+<img src="http://i.imgur.com/e79WWu6.png" alt="Sample 2"></p>
+
+<h1 id="projectfiles">Project Files</h1>
+
+<p>If you would like to read more about what I did for this project, you should visit it's <a href="https://github.com/Ludusamo/Mathematica-FractalTree">Github Repository</a>.</p>
+
+<p>The project is open source so feel free to look around in the notebook file if you have Mathematica and play around with it.</p>
+
+<ul>
+<li>Brendan</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[Project: Work Hard, Play Hard]]></title><description><![CDATA[<p>JUNE 5, 2016</p>
+
+<h1 id="inspiration">Inspiration</h1>
+
+<p>I am in my senior year of high school. If you are in the states, you will know how quickly motivation for seniors in high school to do work deteriorates. As such, I was finding that I was spending an increasing amount of time playing games</p>]]></description><link>http://localhost:2368/project-work-hard-play-hard/</link><guid isPermaLink="false">13d66609-a707-4c9b-96b1-53067664ada0</guid><category><![CDATA[Programming]]></category><category><![CDATA[Project]]></category><category><![CDATA[Pebble]]></category><category><![CDATA[Time]]></category><category><![CDATA[Round]]></category><category><![CDATA[Pebble Time Round]]></category><category><![CDATA[Work Hard Play Hard]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Sun, 05 Jun 2016 20:36:03 GMT</pubDate><content:encoded><![CDATA[<p>JUNE 5, 2016</p>
+
+<h1 id="inspiration">Inspiration</h1>
+
+<p>I am in my senior year of high school. If you are in the states, you will know how quickly motivation for seniors in high school to do work deteriorates. As such, I was finding that I was spending an increasing amount of time playing games and not doing more "worthwhile" things.</p>
+
+<p>One of these games that I played was <a href="https://www.guildwars2.com/en/">Guild Wars 2</a>. I picked up the game over the winter holidays to play with my friends, and I <strong>binged</strong> this game <strong>HARD</strong>. It was clearly becoming an issue. However, regardless of that, one feature that I really liked about this game was that it had a simple command called: <code>/age</code>. Essentially what this did, was just tell you how much time total you have spent playing the game.</p>
+
+<p>This got me thinking, I should really start tracking the time I spend working and playing. Around that time, I got a Pebble Time Round, so I decided to get off my butt and make an application.</p>
+
+<h1 id="idea">Idea</h1>
+
+<p>So, the application would essentially do exactly what I described. On the simplest level, I want the application to be able to tell me the distribution of time that I have spent "playing" as opposed to "working". </p>
+
+<p>I already have a preliminary version of the application up. Here are a couple pictures:</p>
+
+<p><img src="http://localhost:2368/content/images/2016/06/title.png" alt="title"></p>
+
+<p><img src="http://localhost:2368/content/images/2016/06/select.png" alt="select">
+Select between modes. <br>
+<img src="http://localhost:2368/content/images/2016/06/start.png" alt="start">
+Start Time. <br>
+<img src="http://localhost:2368/content/images/2016/06/stop.png" alt="stop">
+Stop Time. <br>
+<img src="http://localhost:2368/content/images/2016/06/visualizer.png" alt="visualizer">
+I even have a pretty nice first visualizer in there.</p>
+
+<h1 id="future">Future</h1>
+
+<p>Right now, the app is very basic. It only keeps track of the total amount of time "playing" or "working" in a single day. I might release a preliminary version with just this. However, I plan to expand it to store data over extended periods of time (companion application or online application?). But that will take a little bit of time. I also hope to tag this information, so I might even be able to see the distribution of time that I spend on individual things.</p>
+
+<p>But for now, I am pretty proud that I finally got off my butt to do something that looks like it might actually reach completion.</p>
+
+<p>Well, until next time.</p>
+
+<ul>
+<li>Brendan</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[Update: June 4th, 2016]]></title><description><![CDATA[<p>JUNE 4, 2016</p>
+
+<p>It has been a while since I posted on this blog. Things have been busy, but now I want to try this blogging thing again.</p>
+
+<h4 id="whatsnew">What's new?</h4>
+
+<h5 id="blog">Blog:</h5>
+
+<p>I migrated this blog over to a Ghost system. The nice folks over at <a href="https://github.com/">Github</a> provide this really nice</p>]]></description><link>http://localhost:2368/update-june-4th-2016/</link><guid isPermaLink="false">3d8415ca-b899-4846-be5e-7914ead586a7</guid><category><![CDATA[Programming]]></category><category><![CDATA[Personal]]></category><category><![CDATA[Update]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Sun, 05 Jun 2016 00:33:00 GMT</pubDate><content:encoded><![CDATA[<p>JUNE 4, 2016</p>
+
+<p>It has been a while since I posted on this blog. Things have been busy, but now I want to try this blogging thing again.</p>
+
+<h4 id="whatsnew">What's new?</h4>
+
+<h5 id="blog">Blog:</h5>
+
+<p>I migrated this blog over to a Ghost system. The nice folks over at <a href="https://github.com/">Github</a> provide this really nice <a href="https://education.github.com/pack">student pack</a>. Among the various things that they supply, it also includes servers on <a href="https://bitnami.com/">Bitnami</a> which allowed me to deploy this very nice looking blog. I will give this a shot.</p>
+
+<h5 id="toylanguage">Toy Language:</h5>
+
+<p>This project is still going on. There have been a few changes that I will talk about in a future blog post, but for now, I will just say I have learned a lot since I first started the project.</p>
+
+<h5 id="workhardplayhard">Work Hard, Play Hard:</h5>
+
+<p>I have a renewed drive to develop for the Pebble smartwatch due to recently purchasing a Pebble Round. I have come up with an app that I want to develop which I will speak more about in the future.</p>
+
+<h4 id="sooooo">Sooooo...</h4>
+
+<p>Its a lot of "more to come", but this time hopefully I will stick to this blogging thing. Well that's all for now.</p>
+
+<ul>
+<li>Brendan Horng</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[Toy Language: VM Update 1]]></title><description><![CDATA[<p>JULY 17, 2015</p>
+
+<h2 id="progress">Progress</h2>
+
+<p>So, this is one of my updates on the progress of the VM. I think it is currently at a point that I can go forward with continuing on writing my compiler. Originally, I wrote some code that demonstrated how my language would look. This was</p>]]></description><link>http://localhost:2368/toy-language-vm-update-1/</link><guid isPermaLink="false">a015af7a-a70b-48bb-b1f0-429e4796704e</guid><category><![CDATA[Programming]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Fri, 03 Jun 2016 00:59:14 GMT</pubDate><content:encoded><![CDATA[<p>JULY 17, 2015</p>
+
+<h2 id="progress">Progress</h2>
+
+<p>So, this is one of my updates on the progress of the VM. I think it is currently at a point that I can go forward with continuing on writing my compiler. Originally, I wrote some code that demonstrated how my language would look. This was the code:</p>
+
+<pre><code>int a = 10  
+int b = 10  
+if (a == b)  
+    print("hi")
+</code></pre>
+
+<p>My original thought was, if I could get my compiler and programming language to do at least that, then I could expand from there. In fact, my VM should be able to handle much more than that. It has branching and can make calls to functions as well. </p>
+
+<p>There are no object oriented code structures yet and there are also no support for arrays. I will deal with those in the future. For now, everything will also compile down to my VM's bytecode.</p>
+
+<p>At this point, I will probably begin to work on my compiler. I will most likely be implementing a recursive descent parser to handle the parsing of my language.</p>
+
+<p>For now, that is all because I got to go to work soon. Further updates will be made in the future.</p>
+
+<ul>
+<li>Ludusamo</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[Toy Language Update]]></title><description><![CDATA[<p>JULY 07, 2015</p>
+
+<h2 id="wowitsbeenawhile">Wow it's been a while.</h2>
+
+<p>So, my first (and last) update on this was... 4 months ago??? Wow... Well now that it is summer time, I have more time to update this blog. The progress on the Toy Language didn't just not progress at all during all</p>]]></description><link>http://localhost:2368/toy-language-update/</link><guid isPermaLink="false">85f5af5e-9724-46c0-b90f-e6c859816ef4</guid><category><![CDATA[Programming]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Fri, 03 Jun 2016 00:52:00 GMT</pubDate><content:encoded><![CDATA[<p>JULY 07, 2015</p>
+
+<h2 id="wowitsbeenawhile">Wow it's been a while.</h2>
+
+<p>So, my first (and last) update on this was... 4 months ago??? Wow... Well now that it is summer time, I have more time to update this blog. The progress on the Toy Language didn't just not progress at all during all that time, I have been working on it in my spare time in between school. However, now I have more time to dedicate on it.</p>
+
+<h2 id="progress">Progress</h2>
+
+<p>During the past four months, I have been focusing most of my time mostly coming up with the lexical analyzer and the parser. However, now I am realizing that I have delved so deep into my code that I lost sight of the bigger picture. So, now I am taking a step back and re-evaluating the steps I need to take.</p>
+
+<h2 id="vm">VM</h2>
+
+<p>The first step I would like to take now is to step away from my compiler code and make a Virtual Machine. I have been doing some research on virtual machines during the past week and I have learned quite a bit. I have two basic implementations of a stack machine and a register machine. While my knowledge is imperfect, from what I can understand, these are the perks and downsides of the two systems:</p>
+
+<h3 id="stackmachine">Stack Machine</h3>
+
+<p>Positives</p>
+
+<ul>
+<li>Highly portable</li>
+<li>Operands are implicit</li>
+<li>Easy to write compilers for</li>
+</ul>
+
+<p>Negatives</p>
+
+<ul>
+<li>More instructions (PUSH and POP ops)</li>
+<li>Relatively slower than register machine</li>
+<li>Difficult to optimize Bytecode</li>
+</ul>
+
+<h3 id="registermachine">Register Machine</h3>
+
+<p>Positives</p>
+
+<ul>
+<li>Fewer instructions</li>
+<li>Easy to optimize Bytecode</li>
+<li>Relatively faster</li>
+</ul>
+
+<p>Negatives</p>
+
+<ul>
+<li>Not as portable</li>
+<li>Long instructions</li>
+<li>Difficult to write compilers for</li>
+</ul>
+
+<h3 id="whatidecidedtouse">What I decided to use</h3>
+
+<p>For the given reasons, while the register machine was very tempting, I have decided to use the stack machine due to the relative ease of creating one. There is nothing to stop me from switching to a register machine later on. But for now, for simplicity's sake, I am going to be going forward with a stack machine.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>So, for now, that's all. I will probably make more regular updates on the progress of the VM. As soon as the VM is done, I will be able to move forward and relook at my compiler. Hopefully, with a VM that I can understand, I will have an easier time parsing and converting the language into the necessary format.</p>
+
+<ul>
+<li>Ludusamo</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[First Week of Work]]></title><description><![CDATA[<p>JULY 03, 2015</p>
+
+<h2 id="firstweekcomplete">First Week Complete!</h2>
+
+<p>Milestone complete? Achievement unlocked? Well, in either case, this being my first real job definitely makes it a milestone in my life.</p>
+
+<h2 id="howitwent">How it went:</h2>
+
+<p>Well, this obviously was a new experience for me seeing as how I have never had a real job</p>]]></description><link>http://localhost:2368/first-week-of-work/</link><guid isPermaLink="false">dbb6444b-369a-4b88-a362-97c0e6d48e4e</guid><category><![CDATA[Personal]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Fri, 03 Jun 2016 00:50:21 GMT</pubDate><content:encoded><![CDATA[<p>JULY 03, 2015</p>
+
+<h2 id="firstweekcomplete">First Week Complete!</h2>
+
+<p>Milestone complete? Achievement unlocked? Well, in either case, this being my first real job definitely makes it a milestone in my life.</p>
+
+<h2 id="howitwent">How it went:</h2>
+
+<p>Well, this obviously was a new experience for me seeing as how I have never had a real job before. There are definitely some things I will have to learn. To begin, some negatives:</p>
+
+<h3 id="wowisithardtositinoneplacefor8hours">WOW is it hard to sit in one place for 8 hours...</h3>
+
+<p>I mean I suppose I do it at home already, but working for 8 hours is difficult. Now don't get me wrong, I have a lunch break, and I am free to move around whenever, but it is pretty taxing to work for so long.</p>
+
+<h3 id="doingonethingalldaycanbecomealittledull">Doing one thing all day can become a little dull...</h3>
+
+<p>I love game development. That was how I began programming in the first place. But wow, it becomes even a little dull for me by the end of the day. I need to start planning out my days better at the beginning so I can have some other tasks to break up the work day for me.</p>
+
+<p>Now, I wouldn't want to only present the negatives, let's end on a positive note!</p>
+
+<h3 id="goodjobmeforchoosingajobthatiactuallyenjoy">Good job me for choosing a job that I ACTUALLY enjoy.</h3>
+
+<p>Despite me saying that the game development starts to get dull by the end of the day, I still LOVE game dev. I have a hard time imagining how I would go through a work day without actually caring about what I do. I mean I am sure I would be able to, but this just makes it A LOT easier and even fun in the process.</p>
+
+<h3 id="fantasticworkenvironment">Fantastic work environment.</h3>
+
+<p>BrightLogic is a relatively small company, but everything feels so friendly. Everyone around knows each other and I know I can go to anyone at any point to ask for help if I need it. The environment is overall just very supportive, and so far I am glad that this is the company with my first work experience.</p>
+
+<h2 id="finalremarks">Final Remarks</h2>
+
+<p>It has been a great week in many ways. I am glad that this was a successful first work week. I have many things to learn and many things I should improve myself on. But for now, here is to many more years of work! CHEERS!</p>
+
+<ul>
+<li>Brendan</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[First Day of Work]]></title><description><![CDATA[<p>JUNE 29, 2015</p>
+
+<h2 id="brightlogic">BrightLogic</h2>
+
+<p>Today was my first day interning at <a href="http://brightlogic.com">BrightLogic</a>. This is my first experience working and I was very excited to get started.</p>
+
+<p>Even though today was mostly spent setting up and getting acquainted with our work environment, it was still a tiring day. I completed setting</p>]]></description><link>http://localhost:2368/first-day-of-work/</link><guid isPermaLink="false">7a383883-f68c-4883-b6d5-6778c31a507f</guid><category><![CDATA[Personal]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Fri, 03 Jun 2016 00:49:43 GMT</pubDate><content:encoded><![CDATA[<p>JUNE 29, 2015</p>
+
+<h2 id="brightlogic">BrightLogic</h2>
+
+<p>Today was my first day interning at <a href="http://brightlogic.com">BrightLogic</a>. This is my first experience working and I was very excited to get started.</p>
+
+<p>Even though today was mostly spent setting up and getting acquainted with our work environment, it was still a tiring day. I completed setting up my little cubicle space along with meeting everyone in the office.</p>
+
+<h2 id="myday">My Day</h2>
+
+<p>I spent the day learning about the interfaces that I would be using in order to begin working on applications for BrightLogic's ActiveFloor. I also spent some time brainstorming ideas for applications and games that I may want to implement for the ActiveFloor.</p>
+
+<p>Overall, it was a pretty good day and I look forward to learning and doing more tomorrow.</p>
+
+<ul>
+<li>Brendan</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[HackBCA Post-Mortem]]></title><description><![CDATA[<p>APRIL 01, 2015</p>
+
+<h2 id="hackbca">HackBCA</h2>
+
+<p>Oh boy, nothing turned out the way that we had originally planned. However, it was a lot of fun, and we ended up having a pretty cool product in the end. We ended up creating a pretty cool bow and arrow game with the Intel Edison</p>]]></description><link>http://localhost:2368/hackbca-post-mortem/</link><guid isPermaLink="false">40e545b6-86f1-4cf1-8842-a8bdbbaf6313</guid><category><![CDATA[Personal]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Fri, 03 Jun 2016 00:48:54 GMT</pubDate><content:encoded><![CDATA[<p>APRIL 01, 2015</p>
+
+<h2 id="hackbca">HackBCA</h2>
+
+<p>Oh boy, nothing turned out the way that we had originally planned. However, it was a lot of fun, and we ended up having a pretty cool product in the end. We ended up creating a pretty cool bow and arrow game with the Intel Edison board serving as the control scheme. This resulted in us winning Intel's subcategory for most creative, which one us each a <a href="http://www.dell.com/us/p/dell-venue-8-3840-tablet/pd">Dell Venue 8 Tablet</a>.</p>
+
+<h2 id="whatwentwrong">What went wrong</h2>
+
+<p>The EMG sensor had arrived two days prior to the event. I went into school the next day to begin the solder work. However, my soldering skills are abyssmal, and it didn't help that I was rushing to finish it up. I had an almost ready sensor by the end of the day.</p>
+
+<p>Then the day of the hackathon, we tried to finish up the sensor. However, it ended up failing and it did not seem to be working. At this point, I sort of began panicking. I gave up on the sensor around 9 or 10. Then, a nice mentor offered me a MYO that he had with him. This was fantastic news... but he didn't have the bluetooth dongle so it didn't work.</p>
+
+<p>At this point, we decided to try and create a control scheme for our game using an Android device. This fell apart because I didn't have Android Studio installed, and I had difficulty setting it up at the time. At the end of all this, we were sitting around 12-1 with the input end of the game not even starting production.</p>
+
+<h2 id="whatwentright">What went right</h2>
+
+<p>This picks up where everything that went wrong ended. My friend came over with the Intel Edison board that he had received from Intel. He wanted me to help teach him to program the board. We explained our problem to him, and he said that his Intel board might be able to serve as that control scheme that we needed. I took a look through the sensors that they gave him. There were two sensors that we could use in order to create something interesting.</p>
+
+<p>Long story short, I spent the rest of the night programming the Intel Edison board to serve as a control scheme.</p>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>This was our final product:</p>
+
+<p><img src="https://i.imgur.com/G2vE8uv.jpg" alt="Final HackBCA product."></p>
+
+<p>It was a fantastic experience. I learned a lot that night, and I am pretty proud of the end result. Our team pulled through in the end and we had a pretty cool prize to show for it. I am definitely looking forward to my next Hackathon.</p>
+
+<ul>
+<li>Brendan</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[Toy Language]]></title><description><![CDATA[<p>MARCH 10, 2015</p>
+
+<h2 id="hithere">Hi there</h2>
+
+<p>This is my first blog post in a while. I will probably make another soon with an update to what happen with my game for the Scholastic Challenge. Today I am announcing another project that I am working on.</p>
+
+<h2 id="whatamiupto">What am I up to?</h2>
+
+<p>I</p>]]></description><link>http://localhost:2368/toy-language/</link><guid isPermaLink="false">bbb2e530-17d5-46ac-97aa-cf5ec76cd0ff</guid><category><![CDATA[Programming]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Fri, 03 Jun 2016 00:48:14 GMT</pubDate><content:encoded><![CDATA[<p>MARCH 10, 2015</p>
+
+<h2 id="hithere">Hi there</h2>
+
+<p>This is my first blog post in a while. I will probably make another soon with an update to what happen with my game for the Scholastic Challenge. Today I am announcing another project that I am working on.</p>
+
+<h2 id="whatamiupto">What am I up to?</h2>
+
+<p>I am starting a new little project that basically entails me creating a simple scripting language. I am not planning on doing anything too fancy with it. <br>
+I was simply playing around with the <a href="http://www.godotengine.org">Godot Engine</a>, which I highly recommend, I saw that they had implemented their own scripting language, and I wondered how hard it was to create one. <br>
+So, I poked around a bit and I saw that there is not a whole ton of resources/tutorials on it. The ones that I did find bored me a little bit so I just decided to try making one from scratch. <br>
+Its not going to be the most efficient language, but I think of it as a little fun challenge for myself. I will probably make further posts on the progress in the future.</p>
+
+<h2 id="othernews">Other News</h2>
+
+<p>I have been looking into electromyography (EMG) as a form of signal to use for a controller. I recently bought a sensor parts from <a href="http://www.bitalino.com">Bitalino</a>. More on this in the future.</p>
+
+<ul>
+<li>Ludusamo</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[Progress: 12-28-14]]></title><description><![CDATA[<p>DECEMBER 28, 2014</p>
+
+<h2 id="todaysprogress">Today's Progress</h2>
+
+<p>Oh boy did we get a lot done today. Not quite as much as I wanted to from yesterday, but quite a bit.</p>
+
+<h2 id="issues">Issues</h2>
+
+<p>As far as coding goes, today went pretty smoothly. Threw a lot of things together in a short span of time,</p>]]></description><link>http://localhost:2368/progress-12-28-14/</link><guid isPermaLink="false">0a524df2-8946-4d6f-9376-b3a84adc1a04</guid><category><![CDATA[Programming]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Fri, 03 Jun 2016 00:47:24 GMT</pubDate><content:encoded><![CDATA[<p>DECEMBER 28, 2014</p>
+
+<h2 id="todaysprogress">Today's Progress</h2>
+
+<p>Oh boy did we get a lot done today. Not quite as much as I wanted to from yesterday, but quite a bit.</p>
+
+<h2 id="issues">Issues</h2>
+
+<p>As far as coding goes, today went pretty smoothly. Threw a lot of things together in a short span of time, so if bugs arise in the future, well there is a good chance that they came from today. But that's an issue for another day. Today we gotta fight a fast approaching deadline.</p>
+
+<h2 id="taskscompleted">Tasks Completed</h2>
+
+<p>Today I:</p>
+
+<ul>
+<li>Implemented a pause menu with save, resume, and quit functionality</li>
+<li>Implemented 2 of the foreseeable 3 dialog types (message and character dialog)</li>
+<li>Implemented a couple more animations</li>
+<li>Minor bug fixes</li>
+</ul>
+
+<p>The save function as of right now only takes in the players position and loads everything else the same. However, this leaves room for the save functionality to be expanded in the future.</p>
+
+<p>This is a short gif of today's progress:</p>
+
+<p><img src="http://i.imgur.com/o002bEH.gif" alt="Dialog and Pause Demo."></p>
+
+<p>So I didn't finish everything I wanted to finish today, but it was good progress. Tomorrow I am going to spearhead NPCs and begin to program in one of the main tropes of the game which is the programming interface for our character. Once that is done, I can begin to move forward on level design and hopefully begin to flesh out the game. Assuming there are no issues, but there <strong><em>always</em></strong> will be. Until next time.</p>
+
+<ul>
+<li>Ludusamo</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[Problem: Perimeter]]></title><description><![CDATA[<p>DECEMBER 28, 2014</p>
+
+<h2 id="problem">Problem</h2>
+
+<p>This is a <a href="http://www.usaco.org/index.php?page=viewproblem2&amp;cpid=243">link</a> to the problem.</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>This problem was considerably easier than the other problems in the same competition. I just simply utilized a recursive floodfill in order to determine the perimeter.</p>
+
+<p>This was done by first completely loading the field into an array.</p>]]></description><link>http://localhost:2368/problem-perimeter/</link><guid isPermaLink="false">74738fed-56e2-4f96-8f9b-eb24a0fdb6ec</guid><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Fri, 03 Jun 2016 00:46:30 GMT</pubDate><content:encoded><![CDATA[<p>DECEMBER 28, 2014</p>
+
+<h2 id="problem">Problem</h2>
+
+<p>This is a <a href="http://www.usaco.org/index.php?page=viewproblem2&amp;cpid=243">link</a> to the problem.</p>
+
+<h2 id="solution">Solution</h2>
+
+<p>This problem was considerably easier than the other problems in the same competition. I just simply utilized a recursive floodfill in order to determine the perimeter.</p>
+
+<p>This was done by first completely loading the field into an array. However, I had to ensure that the floodfill wouldn't get stuck so I had a dummy rows and columns surrounding the field.</p>
+
+<p>X = Empty <br>
+O = Hay <br>
+Actual Field:  </p>
+
+<pre><code>X X X X
+
+X O O X
+
+X O X X
+
+X X X X  
+</code></pre>
+
+<p>With Dummy Row and Columns:  </p>
+
+<pre><code>X X X X X X
+
+X X X X X X
+
+X X O O X X
+
+X X O X X X
+
+X X X X X X
+
+X X X X X X  
+</code></pre>
+
+<p>It may seem a bit overkill here, but it was necessary if the borders were completely filled.</p>
+
+<p>From there I just began at (0, 0), I started here because I knew that this cell had to be clear because it was part of my dummy rows and columns.</p>
+
+<p>Then the floodfill just took care of the work. I just ensured to mark the ones that I had passed and moved on. If it hit a hay bale, it simply marked it and just checked how many sides were empty and added that to the overall perimeter.</p>
+
+<p>And then the algorithm just took over.</p>
+
+<p>This was my full solution:</p>
+
+<pre><code>#include &lt;iostream&gt;
+#include &lt;fstream&gt;
+
+#define MAX_N 10000
+#define FIELD_SIZE 102
+
+/* N hay bales (1 &lt;= N &lt;= 10000)
+ * Field is a 100x100 grid
+ * E/a hay bale takes up 1x1
+ * All hay bales are connected in one mass
+ *
+ * Objective: Determine the perimeter that this mass creates.
+*/
+
+using namespace std;
+
+int N, field[FIELD_SIZE][FIELD_SIZE], visited[FIELD_SIZE][FIELD_SIZE], perimeter = 0;
+
+int numSurrounded(int x, int y) {  
+    return ((field[y-1][x] == 1) ? 1 : 0) + ((field[y+1][x] == 1) ? 1 : 0) + 
+        ((field[y][x+1] == 1) ? 1 : 0) + ((field[y][x+1] == 1) ? 1 : 0);
+}
+
+void checkCell(int x, int y) {  
+    if (visited[y][x] == 1) return;
+    if (field[y][x] == 0) {
+        visited[y][x] = 1;
+        if (y != 0) checkCell(x, y - 1);
+        if (y &lt; FIELD_SIZE - 1) checkCell(x, y + 1);
+        if (x != 0) checkCell(x - 1, y);
+        if (x &lt; FIELD_SIZE - 1) checkCell(x + 1, y);
+    } else {
+        cout &lt;&lt; x &lt;&lt; " " &lt;&lt; y &lt;&lt; endl;
+        perimeter++;    
+    }
+}
+
+void solve() {  
+    checkCell(0, 0);
+}
+
+int main() {  
+    int x, y;
+    ifstream fin("perimeter.in");
+        fin &gt;&gt; N;
+        for (int i = 0; i &lt; N; i++) {
+            fin &gt;&gt; x &gt;&gt; y;
+            field[y][x] = 1;
+        }
+    fin.close();
+    solve();
+    ofstream fout("perimeter.out");
+        cout &lt;&lt; perimeter;
+        fout &lt;&lt; perimeter &lt;&lt; endl;
+    fout.close();   
+
+    return 0;
+}
+</code></pre>
+
+<ul>
+<li>Brendan</li>
+</ul>]]></content:encoded></item></channel></rss>
