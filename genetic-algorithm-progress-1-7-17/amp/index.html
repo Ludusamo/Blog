@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>HackBCA Post-Mortem</title>
+    <title>Genetic Algorithm Progress 1/7/17</title>
     <meta name="description" content="" />
 
     <meta name="HandheldFriendly" content="True" />
@@ -16,21 +16,17 @@
     
     <meta property="og:site_name" content="Brendan&#x27;s Blog" />
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="HackBCA Post-Mortem" />
-    <meta property="og:description" content="APRIL 01, 2015 HackBCA Oh boy, nothing turned out the way that we had originally planned. However, it was a lot of fun, and we ended up having a pretty cool product in the end. We ended up creating a pretty cool bow and arrow game with the Intel Edison" />
-    <meta property="og:url" content="http://localhost:2368/hackbca-post-mortem/" />
-    <meta property="article:published_time" content="2016-06-03T00:48:54.000Z" />
-    <meta property="article:modified_time" content="2016-06-03T01:02:17.000Z" />
-    <meta property="article:tag" content="Personal" />
-    
+    <meta property="og:title" content="Genetic Algorithm Progress 1/7/17" />
+    <meta property="og:description" content="Happy New Year New Year but same old me. Fortunately, same old me actually made some headway into a project. Stardew Valley Genetic Algorithm I began to implement the genetic algorithm and am happy to say that the algorithm has already passed it&#x27;s MVP (minimum viable product). Here is a" />
+    <meta property="og:url" content="http://localhost:2368/genetic-algorithm-progress-1-7-17/" />
+    <meta property="article:published_time" content="2017-01-08T01:43:27.000Z" />
+    <meta property="article:modified_time" content="2017-01-08T01:43:27.000Z" />
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="HackBCA Post-Mortem" />
-    <meta name="twitter:description" content="APRIL 01, 2015 HackBCA Oh boy, nothing turned out the way that we had originally planned. However, it was a lot of fun, and we ended up having a pretty cool product in the end. We ended up creating a pretty cool bow and arrow game with the Intel Edison" />
-    <meta name="twitter:url" content="http://localhost:2368/hackbca-post-mortem/" />
+    <meta name="twitter:title" content="Genetic Algorithm Progress 1/7/17" />
+    <meta name="twitter:description" content="Happy New Year New Year but same old me. Fortunately, same old me actually made some headway into a project. Stardew Valley Genetic Algorithm I began to implement the genetic algorithm and am happy to say that the algorithm has already passed it&#x27;s MVP (minimum viable product). Here is a" />
+    <meta name="twitter:url" content="http://localhost:2368/genetic-algorithm-progress-1-7-17/" />
     <meta name="twitter:label1" content="Written by" />
     <meta name="twitter:data1" content="Brendan Horng" />
-    <meta name="twitter:label2" content="Filed under" />
-    <meta name="twitter:data2" content="Personal" />
     
     <script type="application/ld+json">
 {
@@ -47,12 +43,11 @@
         "url": "http://localhost:2368/author/brendan/",
         "sameAs": []
     },
-    "headline": "HackBCA Post-Mortem",
-    "url": "http://localhost:2368/hackbca-post-mortem/",
-    "datePublished": "2016-06-03T00:48:54.000Z",
-    "dateModified": "2016-06-03T01:02:17.000Z",
-    "keywords": "Personal",
-    "description": "APRIL 01, 2015 HackBCA Oh boy, nothing turned out the way that we had originally planned. However, it was a lot of fun, and we ended up having a pretty cool product in the end. We ended up creating a pretty cool bow and arrow game with the Intel Edison",
+    "headline": "Genetic Algorithm Progress 1/7/17",
+    "url": "http://localhost:2368/genetic-algorithm-progress-1-7-17/",
+    "datePublished": "2017-01-08T01:43:27.000Z",
+    "dateModified": "2017-01-08T01:43:27.000Z",
+    "description": "Happy New Year New Year but same old me. Fortunately, same old me actually made some headway into a project. Stardew Valley Genetic Algorithm I began to implement the genetic algorithm and am happy to say that the algorithm has already passed it&#x27;s MVP (minimum viable product). Here is a",
     "mainEntityOfPage": {
         "@type": "WebPage",
         "@id": "http://localhost:2368"
@@ -846,43 +841,33 @@
         <article class="post">
 
             <header class="post-header">
-                <h1 class="post-title">HackBCA Post-Mortem</h1>
+                <h1 class="post-title">Genetic Algorithm Progress 1/7/17</h1>
                 <section class="post-meta">
                     <p class="author">
                         by <a href="../../author/brendan/index.html">Brendan Horng</a> |
-                    <time class="post-date" datetime="2016-06-02">2016-06-02</time>
+                    <time class="post-date" datetime="2017-01-07">2017-01-07</time>
                     </p>
                 </section>
             </header>
             <section class="post-content">
 
-                <p>APRIL 01, 2015</p>
+                <h1 id="happynewyear">Happy New Year</h1>
 
-<h2 id="hackbca">HackBCA</h2>
+<p>New Year but same old me. Fortunately, same old me actually made some headway into a project.</p>
 
-<p>Oh boy, nothing turned out the way that we had originally planned. However, it was a lot of fun, and we ended up having a pretty cool product in the end. We ended up creating a pretty cool bow and arrow game with the Intel Edison board serving as the control scheme. This resulted in us winning Intel's subcategory for most creative, which one us each a <a href="http://www.dell.com/us/p/dell-venue-8-3840-tablet/pd">Dell Venue 8 Tablet</a>.</p>
+<p><amp-img src="https://i.ytimg.com/vi/FbDdV6etYJQ/maxresdefault.jpg" alt="*Cheers*" width="1280" height="696" layout="responsive"></amp-img></p>
 
-<h2 id="whatwentwrong">What went wrong</h2>
+<h1 id="stardewvalleygeneticalgorithm">Stardew Valley Genetic Algorithm</h1>
 
-<p>The EMG sensor had arrived two days prior to the event. I went into school the next day to begin the solder work. However, my soldering skills are abyssmal, and it didn't help that I was rushing to finish it up. I had an almost ready sensor by the end of the day.</p>
+<p>I began to implement the genetic algorithm and am happy to say that the algorithm has already passed it's MVP (minimum viable product). Here is a screen shot of the beginnings of a UI for it.</p>
 
-<p>Then the day of the hackathon, we tried to finish up the sensor. However, it ended up failing and it did not seem to be working. At this point, I sort of began panicking. I gave up on the sensor around 9 or 10. Then, a nice mentor offered me a MYO that he had with him. This was fantastic news... but he didn't have the bluetooth dongle so it didn't work.</p>
+<p><amp-img src="http://localhost:2368/content/images/2017/01/Genetic-Algorithm-Progress-1-7.png" alt width="642" height="666" layout="responsive"></amp-img></p>
 
-<p>At this point, we decided to try and create a control scheme for our game using an Android device. This fell apart because I didn't have Android Studio installed, and I had difficulty setting it up at the time. At the end of all this, we were sitting around 12-1 with the input end of the game not even starting production.</p>
+<p>The red squares represent sprinklers and the blue squares represent watered squares. This image doesn't show it, but if the square is not watered or a sprinkler then it would appear brown. If you are confused about what I am talking about with sprinklers and watered squares, you should read my <a href="http://ludusamo.com/Blog/side-project-genetic-algorithms/">first blog post</a> about this project.</p>
 
-<h2 id="whatwentright">What went right</h2>
+<p>I hope to do some more work on the UI, perhaps have some sliders to affect some of the variables of the genetic algorithm. But for now, I am just happy that I got a project in a working state (although there may be a memory leak still in there... shhh).</p>
 
-<p>This picks up where everything that went wrong ended. My friend came over with the Intel Edison board that he had received from Intel. He wanted me to help teach him to program the board. We explained our problem to him, and he said that his Intel board might be able to serve as that control scheme that we needed. I took a look through the sensors that they gave him. There were two sensors that we could use in order to create something interesting.</p>
-
-<p>Long story short, I spent the rest of the night programming the Intel Edison board to serve as a control scheme.</p>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>This was our final product:</p>
-
-<p><amp-img src="https://i.imgur.com/G2vE8uv.jpg" alt="Final HackBCA product." width="695" height="494" layout="responsive"></amp-img></p>
-
-<p>It was a fantastic experience. I learned a lot that night, and I am pretty proud of the end result. Our team pulled through in the end and we had a pretty cool prize to show for it. I am definitely looking forward to my next Hackathon.</p>
+<p>Until the next update.</p>
 
 <ul>
 <li>Brendan</li>
