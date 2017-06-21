@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Brendan's Blog]]></title><description><![CDATA[Programming, engineering, and general rambling.]]></description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Sun, 08 Jan 2017 01:47:39 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Genetic Algorithm Progress 1/7/17]]></title><description><![CDATA[<h1 id="happynewyear">Happy New Year</h1>
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel><title><![CDATA[Brendan's Blog]]></title><description><![CDATA[Programming, engineering, and general rambling.]]></description><link>http://localhost:2368/</link><generator>Ghost 0.11</generator><lastBuildDate>Wed, 21 Jun 2017 00:19:17 GMT</lastBuildDate><atom:link href="http://localhost:2368/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Weekend Projects]]></title><description><![CDATA[<h1 id="dotfiles">Dotfiles</h1>
+
+<p>I set up a <a href="http://localhost:2368/weekend-projects/">dotfile</a> directory to house all of my dotfiles this past weekend to automatically assist in setting up my dotfiles and syncing them.</p>
+
+<h3 id="motivation">Motivation</h3>
+
+<p>I decided to do this as I am moving towards using the command line and Unix to do most of my development.</p>]]></description><link>http://localhost:2368/weekend-projects/</link><guid isPermaLink="false">317f69f1-8f5f-45d1-894a-5c654d36aa95</guid><category><![CDATA[bash]]></category><category><![CDATA[vim]]></category><category><![CDATA[tmux]]></category><category><![CDATA[dotfiles]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Wed, 21 Jun 2017 00:15:43 GMT</pubDate><content:encoded><![CDATA[<h1 id="dotfiles">Dotfiles</h1>
+
+<p>I set up a <a href="http://localhost:2368/weekend-projects/">dotfile</a> directory to house all of my dotfiles this past weekend to automatically assist in setting up my dotfiles and syncing them.</p>
+
+<h3 id="motivation">Motivation</h3>
+
+<p>I decided to do this as I am moving towards using the command line and Unix to do most of my development. This involves <a href="https://github.com/tmux/tmux">Tmux</a> and <a href="http://www.vim.org/">Vim</a>, which I have been using for a while now.</p>
+
+<h3 id="theproject">The Project</h3>
+
+<p>The project basically consists of my dotfiles dumped into a directory. This is currently just <code>.vimrc</code> and <code>.tmux.conf</code>, though I expect that this list will grow a little as time goes on.</p>
+
+<p>I also wrote two custom shell scripts to help with installation and syncing.</p>
+
+<h6 id="filelocations">File Locations</h6>
+
+<p>This is just a file of the format <code>FILE_NAME FILE_PATH</code> per line. <code>FILE_NAME</code> would be the name of the dotfile and <code>FILE_PATH</code> would be the path that it is expected to be at in my system. All paths are relative to the <code>$HOME</code> directory (in the case of my desktop, <code>/home/brendan</code>).</p>
+
+<p>An example of this would be: <code>.vimrc</code>.</p>
+
+<p>Because I specify no path, <code>.vimrc</code> will simply be expected to be in <code>$HOME</code>.</p>
+
+<h6 id="setup">Setup</h6>
+
+<p>The <code>setup</code> script reads from <code>file_locations</code> and runs through and checks if the file exists at its expected location. Then:</p>
+
+<ul>
+<li>If the files are different:
+<ul><li>The file gets copied over to the destination</li></ul></li>
+<li>If the files are the same:
+<ul><li>The file gets copied over if the file is different than the one in the repository</li></ul></li>
+</ul>
+
+<h6 id="sync">Sync</h6>
+
+<p>The <code>sync_dotfiles</code> script checks if the repository is currently on <code>master</code>. If it isn't, it stashes local changes and switches to <code>master</code>. It then checks if we currently have the latest version of <code>master</code>:</p>
+
+<ul>
+<li>If we are not on the latest version of <code>master</code>:
+<ol><li>Pulls in the latest changes of master</li>
+<li>Overwrites each file locally to match master based on <code>file_locations</code></li></ol></li>
+<li>If we are on the latest version of <code>master</code>:
+<ol><li>Goes through <code>file_locations</code> and copies over any changes into the repo</li>
+<li>Commits and pushes up an automated backup to <code>master</code> if any of the scripts have changed</li></ol></li>
+</ul>
+
+<p>The <code>sync_dotfiles</code> script is treated as a "dotfile" itself. Meaning it can overwrite/backup itself and is included in the setup.</p>
+
+<p>Now I know what you are thinking: "That sounds awfully dangerous." <br>
+And it is, but it is also awfully convenient. My argument is that I don't need to make this entirely idiot proof as I probably will be the only one using this (not that I'm not an idiot, but I think I can trust myself to not screw up this system).</p>
+
+<p>Another hole in this script is that it could potentially overwrite changes locally on one device if it is behind on master. This is true. But again, I don't expect that I will be changing my dotfiles ALL that often, and rarely on two different computers at once. </p>
+
+<p>So yes, it could cause problems, but none that are significant enough for me to feel like adding extra complexity to this system. It will work fine for what I need.</p>
+
+<p>This <code>sync_dotfiles</code> script is added to my <code>/etc/cron.daily</code> so it will perform the backup automatically everyday.</p>
+
+<h3 id="biggerpicture">Bigger Picture</h3>
+
+<p>This is eventually going to be part of a bigger system. I am going to make scripts to automate the setup of my Linux work environment to expedite the process when I switch Linux distros or decide to wipe my partition (fastest way to get of junk is to start fresh in my opinion).</p>
+
+<p>This is a good start for me and I am excited to see how this works now that I have begun using it.</p>
+
+<ul>
+<li>Ludusamo</li>
+</ul>]]></content:encoded></item><item><title><![CDATA[Genetic Algorithm Progress 1/7/17]]></title><description><![CDATA[<h1 id="happynewyear">Happy New Year</h1>
 
 <p>New Year but same old me. Fortunately, same old me actually made some headway into a project.</p>
 
@@ -484,45 +555,6 @@ Its not going to be the most efficient language, but I think of it as a little f
 <h2 id="othernews">Other News</h2>
 
 <p>I have been looking into electromyography (EMG) as a form of signal to use for a controller. I recently bought a sensor parts from <a href="http://www.bitalino.com">Bitalino</a>. More on this in the future.</p>
-
-<ul>
-<li>Ludusamo</li>
-</ul>]]></content:encoded></item><item><title><![CDATA[Progress: 12-28-14]]></title><description><![CDATA[<p>DECEMBER 28, 2014</p>
-
-<h2 id="todaysprogress">Today's Progress</h2>
-
-<p>Oh boy did we get a lot done today. Not quite as much as I wanted to from yesterday, but quite a bit.</p>
-
-<h2 id="issues">Issues</h2>
-
-<p>As far as coding goes, today went pretty smoothly. Threw a lot of things together in a short span of time,</p>]]></description><link>http://localhost:2368/progress-12-28-14/</link><guid isPermaLink="false">0a524df2-8946-4d6f-9376-b3a84adc1a04</guid><category><![CDATA[Programming]]></category><dc:creator><![CDATA[Brendan Horng]]></dc:creator><pubDate>Fri, 03 Jun 2016 00:47:24 GMT</pubDate><content:encoded><![CDATA[<p>DECEMBER 28, 2014</p>
-
-<h2 id="todaysprogress">Today's Progress</h2>
-
-<p>Oh boy did we get a lot done today. Not quite as much as I wanted to from yesterday, but quite a bit.</p>
-
-<h2 id="issues">Issues</h2>
-
-<p>As far as coding goes, today went pretty smoothly. Threw a lot of things together in a short span of time, so if bugs arise in the future, well there is a good chance that they came from today. But that's an issue for another day. Today we gotta fight a fast approaching deadline.</p>
-
-<h2 id="taskscompleted">Tasks Completed</h2>
-
-<p>Today I:</p>
-
-<ul>
-<li>Implemented a pause menu with save, resume, and quit functionality</li>
-<li>Implemented 2 of the foreseeable 3 dialog types (message and character dialog)</li>
-<li>Implemented a couple more animations</li>
-<li>Minor bug fixes</li>
-</ul>
-
-<p>The save function as of right now only takes in the players position and loads everything else the same. However, this leaves room for the save functionality to be expanded in the future.</p>
-
-<p>This is a short gif of today's progress:</p>
-
-<p><img src="http://i.imgur.com/o002bEH.gif" alt="Dialog and Pause Demo."></p>
-
-<p>So I didn't finish everything I wanted to finish today, but it was good progress. Tomorrow I am going to spearhead NPCs and begin to program in one of the main tropes of the game which is the programming interface for our character. Once that is done, I can begin to move forward on level design and hopefully begin to flesh out the game. Assuming there are no issues, but there <strong><em>always</em></strong> will be. Until next time.</p>
 
 <ul>
 <li>Ludusamo</li>
