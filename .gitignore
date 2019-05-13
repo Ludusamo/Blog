@@ -125,3 +125,4 @@ config.*.json
 
 # Coverage reports
 coverage.html
+elm-stuff/
