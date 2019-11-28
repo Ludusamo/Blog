@@ -1,0 +1,38 @@
+Content {
+  display: grid;
+  grid-template-columns: 10% 40% 40% 10%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    ". header header ."
+    ". description description ."
+    ". posts posts ."
+    ". footer footer .";
+}
+
+Header {
+  grid-area: header;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+HeaderTitle {
+  font-size: 2rem;
+  margin-right: auto;
+}
+
+Description {
+  grid-area: description;
+  font-size: 1.5rem;
+}
+
+PostList {
+  grid-area: posts;
+}
+
+Footer {
+  grid-area: footer;
+  color: grey;
+  font-size: 1rem;
+}
