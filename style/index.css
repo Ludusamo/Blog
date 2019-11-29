@@ -1,16 +1,25 @@
 Content {
-  display: grid;
-  grid-template-columns: 10% 40% 40% 10%;
-  grid-template-rows: auto;
-  grid-template-areas:
-    ". header header ."
-    ". description description ."
-    ". posts posts ."
-    ". footer footer .";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+hr {
+  display: block;
+  margin-before: 0.5em;
+  margin-after: 0.5em;
+  margin-start: auto;
+  margin-end: auto;
+  overflow: hidden;
+  border 1px inset;
+  opacity: 60%;
+  color: black;
+}
+
+.horizontal-break {
 }
 
 Header {
-  grid-area: header;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-end;
@@ -22,17 +31,49 @@ HeaderTitle {
   margin-right: auto;
 }
 
+Links {
+  display: flex;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
 Description {
-  grid-area: description;
   font-size: 1.5rem;
 }
 
 PostList {
-  grid-area: posts;
 }
 
 Footer {
-  grid-area: footer;
   color: grey;
   font-size: 1rem;
+}
+
+Content > * {
+  max-width: 40rem;
+  width: 100%;
+}
+
+@media all and (max-width:500px) {
+  Header {
+    flex-direction: column;
+  }
+  html {
+    font-size: 16px;
+  }
+}
+
+@media all and (max-width:800px) {
+  Header {
+    justify-content: space-around;
+  }
+  html {
+    font-size: 18px;
+  }
+}
+
+@media all and (max-width:1100px) {
+  html {
+    font-size: 20px;
+  }
 }

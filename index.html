@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>
-      Ludusamo's Blog
-    </title>
+    <title>Ludusamo's Blog</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="style/index.css" media="screen">
   </head>
   <body>
@@ -13,18 +13,25 @@
           Ludusamo's Blog
         </HeaderTitle>
         <Links>
-          Link1
+          <a href="/tags">Tags</a>
+        </Links>
+        <Links>
+          <a href="/archive">Archive</a>
+        </Links>
+        <Links>
+          <a href="/rss">RSS</a>
         </Links>
       </Header>
+      <hr class="horizontal-break"/>
       <Description>
         Hi, my name is Brendan Horng! I am a software engineer passionate about compiler and language design. I am also a casual pen collector and video game player.
       </Description>
       <PostList>
-        POSTS
       </PostList>
       <Footer>
-        © 2019 Brendan Horng • License MIT
+        © 2019 Brendan Horng • License <a href="https://github.com/Ludusamo/blog/blob/master/LICENSE">MIT</a>
       </Footer>
     </Content>
   </body>
+  <script src="src/index.js"></script>
 </html>
