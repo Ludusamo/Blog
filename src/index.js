@@ -2,6 +2,7 @@
 /*eslint no-undef: "error"*/
 
 showdown.setFlavor('github');
+showdown.setOption('simpleLineBreaks', false);
 
 // Routes
 
@@ -156,7 +157,7 @@ async function postPageLoad(id) {
   const content = await loadPostContent(id)
   document.getElementsByTagName('PostTitle')[0].innerText = postInfo.title
   document.getElementsByTagName('PostDate')[0].innerText =
-    'Date: ' + moment(postInfo.date).format('YYYY-MM-DD')
+    'Date: ' + moment(postInfo.date).format('ll')
   document.getElementsByTagName('PostTags')[0].innerText =
     'Tags: ' + postInfo.tags
   document.getElementsByTagName('PostContent')[0].innerHTML = content

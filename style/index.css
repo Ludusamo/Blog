@@ -5,6 +5,18 @@ Content {
   font-family: 'Montserrat', sans-serif;
 }
 
+h1,h2,h3,h4 {
+  font-family: 'Roboto', sans-serif;
+}
+
+h1:hover {
+  color: #FF7F2E;
+}
+
+h2:hover {
+  color: #3FC3BF;
+}
+
 hr {
   display: block;
   margin-before: 0.5em;
@@ -31,11 +43,11 @@ HeaderTitle {
 }
 
 BrandLeft {
-  color: #444;
+  color: #999;
 }
 
 BrandRight {
-  color: #999;
+  color: #444;
 }
 
 HeaderTitle:hover BrandLeft {
@@ -53,7 +65,7 @@ Links {
 }
 
 Description {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-family: 'Roboto Mono', monospace;
 }
 
@@ -86,6 +98,7 @@ PostListing {
 PostListTitle {
   margin-right: auto;
   font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
 }
 
 PostListTitle:hover {
@@ -96,6 +109,7 @@ PostListDate {
   color: #999;
   font-family: 'Roboto', sans-serif;
   margin-right: 0.5rem;
+  font-size: 1.25rem;
 }
 
 .link::before,
@@ -184,7 +198,7 @@ BackButton:hover {
     border-radius: 2px;
   }
   html {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
@@ -193,12 +207,12 @@ BackButton:hover {
     justify-content: space-around;
   }
   html {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
 @media all and (min-width:1100px) {
   html {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
