@@ -8,7 +8,7 @@ showdown.setFlavor('github');
 let mainPage = `
     <Header>
       <HeaderTitle>
-        LUDUSAMO
+        <BrandLeft>LUDUS</BrandLeft><BrandRight>AMO</BrandRight>
       </HeaderTitle>
     </Header>
     <hr/>

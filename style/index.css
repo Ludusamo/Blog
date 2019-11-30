@@ -30,6 +30,22 @@ HeaderTitle {
   font-family: 'Roboto', sans-serif;
 }
 
+BrandLeft {
+  color: #444;
+}
+
+BrandRight {
+  color: #999;
+}
+
+HeaderTitle:hover BrandLeft {
+  color: #FF7F2E;
+}
+
+HeaderTitle:hover BrandRight {
+  color: #3FC3BF;
+}
+
 Links {
   display: flex;
   font-size: 1.5rem;
