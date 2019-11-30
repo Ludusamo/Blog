@@ -57,8 +57,43 @@ PostListing {
   justify-content: flex-end;
 }
 
-PostTitle {
+PostListTitle {
   margin-right: auto;
+}
+
+.link::before,
+.link::after {
+  display: inline-block;
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.link::before {
+  margin-right: 10px;
+  content: '[';
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.link::after {
+  margin-left: 10px;
+  content: ']';
+  -webkit-transform: translateX(-20px);
+  -moz-transform: translateX(-20px);
+  transform: translateX(-20px);
+}
+
+.link:hover::before,
+.link:hover::after,
+.link:focus::before,
+.link:focus::after {
+  opacity: 1;
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  transform: translateX(0px);
 }
 
 Footer {
@@ -66,9 +101,33 @@ Footer {
   font-size: 1rem;
 }
 
+PostTitle {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
 Content > * {
   max-width: 40rem;
   width: 100%;
+}
+
+@keyframes shiftLeft {
+  0%   { margin-left: 0.0rem; }
+  25%  { margin-left: -0.1rem; }
+  50%  { margin-left: -0.2rem; }
+  75%  { margin-left: -0.3rem; }
+  100% { margin-left: 0.0rem; }
+}
+
+BackButton {
+  font-size: 2rem;
+  margin-right: auto;
+}
+
+BackButton:hover {
+  animation-name: shiftLeft;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 @media all and (max-width:500px) {

@@ -1,5 +1,7 @@
-/*global jsyaml, moment*/
+/*global jsyaml, moment, showdown*/
 /*eslint no-undef: "error"*/
+
+showdown.setFlavor('github');
 
 // Routes
 
@@ -8,15 +10,6 @@ let mainPage = `
       <HeaderTitle>
         Ludusamo's Blog
       </HeaderTitle>
-      <Links>
-        <a href="/tags">Tags</a>
-      </Links>
-      <Links>
-        <a href="/archive">Archive</a>
-      </Links>
-      <Links>
-        <a href="/rss">RSS</a>
-      </Links>
     </Header>
     <hr/>
     <Description>
@@ -32,7 +25,20 @@ let mainPage = `
 `
 
 let postPage = `
-  Post Page
+  <Header>
+    <BackButton>🡰</BackButton>
+  </Header>
+  <hr/>
+  <PostTitle>
+  </PostTitle>
+  <PostDate>
+  </PostDate>
+  <PostTags>
+  </PostTags>
+  <PostReadingTime>
+  </PostReadingTime>
+  <PostContent>
+  </PostContent>
 `
 
 // Routing
@@ -60,11 +66,11 @@ const router = async () => {
   let parsedURL = (request.resource ? '/' + request.resource : '/')
                 + (request.id ? '/:id' : '')
   content.innerHTML = routes[parsedURL].content
-  await routes[parsedURL].load()
+  await routes[parsedURL].load(request.id)
 }
 
-const onNavLinkClick = (pathName) => {
-  window.history.pushState({}, pathName, window.location.origin +  pathName)
+const onNavLinkClick = (pathName, state={}) => {
+  window.history.pushState(state, pathName, window.location.origin +  pathName)
   router()
 }
 
@@ -90,11 +96,12 @@ function yearGrouping(posts) {
 
 function createPostListing(post) {
   const postEle = document.createElement('PostListing')
-  const postTitle = document.createElement('PostTitle')
-  const postDate = document.createElement('PostDate')
+  const postTitle = document.createElement('PostListTitle')
+  const postDate = document.createElement('PostListDate')
   const postLink = document.createElement('PostLink')
   postLink.innerText = post.title
-  postLink.onclick = () => onNavLinkClick('/#/post/' + post.route)
+  postLink.onclick = () => onNavLinkClick('/#/post/' + post.route, post)
+  postLink.classList.add('link')
   postTitle.appendChild(postLink)
   postDate.innerText = moment(post.date).format('YYYY-MM-DD')
   postEle.appendChild(postTitle)
@@ -119,7 +126,8 @@ function populatePostList(postMetadata) {
 }
 
 async function mainPageLoad() {
-  const res = await fetch('posts/metadata.yml', {headers: {
+  const res = await fetch('posts/metadata.yml',
+    { headers: {
         'Content-Type': 'application/yaml'
       }})
   const yamlContent = await res.text()
@@ -127,6 +135,31 @@ async function mainPageLoad() {
   populatePostList(metadata)
 }
 
-async function postPageLoad() {
+async function loadPostContent(id) {
+  const markdownLoc = 'posts/' + id + '/' + id + '.md'
+  const res = await fetch(markdownLoc,
+    { headers: {
+      'Content-Type': 'text/markdown; charset=UTF-8'
+    }})
+  const md = await res.text()
+  const content = new showdown.Converter().makeHtml(md)
+  return content
+}
 
+async function postPageLoad(id) {
+  loadPostContent(id)
+  let backButton = document.getElementsByTagName('BackButton')[0]
+  backButton.onclick = () => {
+    window.history.back()
+  }
+  const postInfo = window.history.state
+  const content = await loadPostContent(id)
+  document.getElementsByTagName('PostTitle')[0].innerText = postInfo.title
+  document.getElementsByTagName('PostDate')[0].innerText =
+    'Date: ' + moment(postInfo.date).format('YYYY-MM-DD')
+  document.getElementsByTagName('PostTags')[0].innerText =
+    'Tags: ' + postInfo.tags
+  document.getElementsByTagName('PostContent')[0].innerHTML = content
+  document.getElementsByTagName('PostReadingTIme')[0].innerText =
+    'Time: ~' + Math.ceil(content.split(' ').length / 200) + ' min'
 }
