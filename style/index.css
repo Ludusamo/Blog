@@ -16,9 +16,6 @@ hr {
   color: black;
 }
 
-.horizontal-break {
-}
-
 Header {
   display: flex;
   flex-flow: row wrap;
@@ -42,6 +39,26 @@ Description {
 }
 
 PostList {
+  display: flex;
+  flex-direction: column;
+}
+
+YearGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+YearTitle {
+  font-size: 1.5rem;
+}
+
+PostListing {
+  display: flex;
+  justify-content: flex-end;
+}
+
+PostTitle {
+  margin-right: auto;
 }
 
 Footer {
@@ -72,7 +89,7 @@ Content > * {
   }
 }
 
-@media all and (max-width:1100px) {
+@media all and (min-width:1100px) {
   html {
     font-size: 20px;
   }
