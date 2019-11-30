@@ -70,6 +70,12 @@ YearGroup {
 YearTitle {
   font-size: 1.5rem;
   font-family: 'Roboto Mono', monospace;
+  font-weight: bold;
+  padding-bottom: 0.8rem;
+}
+
+YearTitle:hover {
+  color: #FF7F2E;
 }
 
 PostListing {
@@ -82,9 +88,14 @@ PostListTitle {
   font-family: 'Roboto', sans-serif;
 }
 
+PostListTitle:hover {
+  color: #3FC3BF;
+}
+
 PostListDate {
   color: #999;
   font-family: 'Roboto', sans-serif;
+  margin-right: 0.5rem;
 }
 
 .link::before,
@@ -97,19 +108,19 @@ PostListDate {
 }
 
 .link::before {
-  margin-right: 10px;
+  margin-right: 0.5rem;
   content: '[';
-  -webkit-transform: translateX(20px);
-  -moz-transform: translateX(20px);
-  transform: translateX(20px);
+  -webkit-transform: translateX(1rem);
+  -moz-transform: translateX(1rem);
+  transform: translateX(1rem);
 }
 
 .link::after {
-  margin-left: 10px;
+  margin-left:  0.5rem;
   content: ']';
-  -webkit-transform: translateX(-20px);
-  -moz-transform: translateX(-20px);
-  transform: translateX(-20px);
+  -webkit-transform: translateX(-1rem);
+  -moz-transform: translateX(-1rem);
+  transform: translateX(-1rem);
 }
 
 .link:hover::before,
@@ -117,9 +128,9 @@ PostListDate {
 .link:focus::before,
 .link:focus::after {
   opacity: 1;
-  -webkit-transform: translateX(0px);
-  -moz-transform: translateX(0px);
-  transform: translateX(0px);
+  -webkit-transform: translateX(0rem);
+  -moz-transform: translateX(0rem);
+  transform: translateX(0rem);
 }
 
 Footer {
@@ -134,7 +145,7 @@ PostTitle {
 }
 
 Content > * {
-  max-width: 40rem;
+  max-width: 50rem;
   width: 100%;
 }
 
@@ -160,6 +171,17 @@ BackButton:hover {
 @media all and (max-width:500px) {
   Header {
     flex-direction: column;
+  }
+  YearGroup {
+  }
+  YearTitle {
+    font-size: 2rem;
+  }
+  PostListing {
+    font-size: 1.5rem;
+    background-color: #F2F2F2;
+    border: 1px solid #CCC;
+    border-radius: 2px;
   }
   html {
     font-size: 12px;
