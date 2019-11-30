@@ -8,7 +8,7 @@ showdown.setFlavor('github');
 let mainPage = `
     <Header>
       <HeaderTitle>
-        Ludusamo's Blog
+        LUDUSAMO
       </HeaderTitle>
     </Header>
     <hr/>
@@ -150,7 +150,7 @@ async function postPageLoad(id) {
   loadPostContent(id)
   let backButton = document.getElementsByTagName('BackButton')[0]
   backButton.onclick = () => {
-    window.history.back()
+      onNavLinkClick('/', {})
   }
   const postInfo = window.history.state
   const content = await loadPostContent(id)

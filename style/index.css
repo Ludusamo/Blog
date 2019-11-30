@@ -2,6 +2,7 @@ Content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: 'Montserrat', sans-serif;
 }
 
 hr {
@@ -26,6 +27,7 @@ Header {
 HeaderTitle {
   font-size: 2rem;
   margin-right: auto;
+  font-family: 'Roboto', sans-serif;
 }
 
 Links {
@@ -36,6 +38,7 @@ Links {
 
 Description {
   font-size: 1.5rem;
+  font-family: 'Roboto Mono', monospace;
 }
 
 PostList {
@@ -50,6 +53,7 @@ YearGroup {
 
 YearTitle {
   font-size: 1.5rem;
+  font-family: 'Roboto Mono', monospace;
 }
 
 PostListing {
@@ -59,6 +63,12 @@ PostListing {
 
 PostListTitle {
   margin-right: auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+PostListDate {
+  color: #999;
+  font-family: 'Roboto', sans-serif;
 }
 
 .link::before,
@@ -98,12 +108,13 @@ PostListTitle {
 
 Footer {
   color: grey;
-  font-size: 1rem;
+  font-size: 0.7rem;
 }
 
 PostTitle {
   font-size: 3rem;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 
 Content > * {
@@ -135,7 +146,7 @@ BackButton:hover {
     flex-direction: column;
   }
   html {
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 
@@ -144,12 +155,12 @@ BackButton:hover {
     justify-content: space-around;
   }
   html {
-    font-size: 18px;
+    font-size: 14px;
   }
 }
 
 @media all and (min-width:1100px) {
   html {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
