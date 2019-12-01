@@ -43,19 +43,19 @@ HeaderTitle {
 }
 
 BrandLeft {
-  color: #999;
-}
-
-BrandRight {
-  color: #444;
-}
-
-HeaderTitle:hover BrandLeft {
   color: #FF7F2E;
 }
 
-HeaderTitle:hover BrandRight {
+BrandRight {
   color: #3FC3BF;
+}
+
+HeaderTitle:hover BrandLeft {
+  color: #999;
+}
+
+HeaderTitle:hover BrandRight {
+  color: #444;
 }
 
 Links {
