@@ -27,7 +27,7 @@ let mainPage = `
 
 let postPage = `
   <Header>
-    <BackButton>🡰</BackButton>
+    <BackButton>◀</BackButton>
   </Header>
   <hr/>
   <PostTitle>
