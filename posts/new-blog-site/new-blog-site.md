@@ -50,7 +50,10 @@ Now don't get me wrong, there is **nothing** wrong with [your](https://vuejs.org
 they do and for larger projects where there is more complexity to manage, they
 make a whole lot of sense.  But the amount of boilerplate that comes along with
 those frameworks in dependencies and build process was, in my opinion, too much
-compared to **<50** lines of [html]() and **<200** lines of [CSS]() and [Javascript]()
+compared to **<50** lines of
+[HTML](https://github.com/Ludusamo/blog/blob/31959/index.html) and **<200**
+lines of [CSS](https://github.com/Ludusamo/blog/blob/31959/style/index.css) and
+[Javascript](https://github.com/Ludusamo/blog/blob/31959/src/index.js)
 respectively.
 
 I wasn't able to have zero library dependencies though. I brought in:
