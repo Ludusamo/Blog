@@ -99,6 +99,7 @@ PostListTitle {
   margin-right: auto;
   font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
+  text-decoration: underline;
 }
 
 PostListTitle:hover {
