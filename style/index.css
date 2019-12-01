@@ -104,6 +104,7 @@ PostListTitle {
 
 PostListTitle:hover {
   color: #3FC3BF;
+  cursor: pointer;
 }
 
 PostListDate {
@@ -146,6 +147,7 @@ PostListDate {
   -webkit-transform: translateX(0rem);
   -moz-transform: translateX(0rem);
   transform: translateX(0rem);
+  cursor: pointer;
 }
 
 Footer {
@@ -181,6 +183,7 @@ BackButton:hover {
   animation-name: shiftLeft;
   animation-duration: 1s;
   animation-iteration-count: infinite;
+  cursor: pointer;
 }
 
 @media all and (max-width:500px) {
