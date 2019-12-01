@@ -101,7 +101,7 @@ function createPostListing(post) {
   const postDate = document.createElement('PostListDate')
   const postLink = document.createElement('PostLink')
   postLink.innerText = post.title
-  postLink.onclick = () => onNavLinkClick('/#/post/' + post.route, post)
+  postLink.onclick = () => onNavLinkClick('/blog/#/post/' + post.route, post)
   postLink.classList.add('link')
   postTitle.appendChild(postLink)
   postDate.innerText = moment(post.date).format('YYYY-MM-DD')
@@ -127,7 +127,7 @@ function populatePostList(postMetadata) {
 }
 
 async function mainPageLoad() {
-  const res = await fetch('posts/metadata.yml',
+  const res = await fetch('/blog/posts/metadata.yml',
     { headers: {
         'Content-Type': 'application/yaml'
       }})
@@ -137,7 +137,7 @@ async function mainPageLoad() {
 }
 
 async function loadPostContent(id) {
-  const markdownLoc = 'posts/' + id + '/' + id + '.md'
+  const markdownLoc = '/blog/posts/' + id + '/' + id + '.md'
   const res = await fetch(markdownLoc,
     { headers: {
       'Content-Type': 'text/markdown; charset=UTF-8'
@@ -148,10 +148,9 @@ async function loadPostContent(id) {
 }
 
 async function postPageLoad(id) {
-  loadPostContent(id)
   let backButton = document.getElementsByTagName('BackButton')[0]
   backButton.onclick = () => {
-      onNavLinkClick('/', {})
+      onNavLinkClick('/blog', {})
   }
   const postInfo = window.history.state
   const content = await loadPostContent(id)
