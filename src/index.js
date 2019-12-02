@@ -1,4 +1,4 @@
-/*global jsyaml, moment, showdown*/
+/*global jsyaml, moment, showdown, Prism*/
 /*eslint no-undef: "error"*/
 
 showdown.setFlavor('github');
@@ -162,4 +162,5 @@ async function postPageLoad(id) {
   document.getElementsByTagName('PostContent')[0].innerHTML = content
   document.getElementsByTagName('PostReadingTIme')[0].innerText =
     'Time: ~' + Math.ceil(content.split(' ').length / 200) + ' min'
+  await Prism.highlightAll()
 }
