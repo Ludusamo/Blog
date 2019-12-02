@@ -1,7 +1,11 @@
 ---
 posts:
+  advent-of-code-day-1:
+    title: "Advent of Code: Day 1"
+    date: 2019-12-01 12:00:00
+    tags: [J, JSoftware, adventofcode]
   new-blog-site:
     title: New Blog Site!
-    date: 2019-11-29
+    date: 2019-11-29 12:00:00
     tags: [blog, javascript, html, webdev, projects]
 ...
