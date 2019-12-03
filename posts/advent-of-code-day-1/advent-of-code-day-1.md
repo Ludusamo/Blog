@@ -136,6 +136,8 @@ cf =: 3 : 'if. (cfb y) <: 0 do. 0 elseif. 1 do. (cfb y) + (cf (cfb y)) end.'
 echo +/ cf"0 d
 ```
 
+### Breakdown
+
 Alright, a lot more to unpack here. The first line is the same as above.
 
 `cfb` is essentially what we did in the first part, but turned into a function.

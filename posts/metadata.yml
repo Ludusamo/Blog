@@ -1,7 +1,11 @@
 ---
 posts:
+  advent-of-code-day-2:
+    title: "Advent of Code: Day 2 - BASIC"
+    date: 2019-12-02 12:00:00
+    tags: [BASIC, freebasic, adventofcode]
   advent-of-code-day-1:
-    title: "Advent of Code: Day 1"
+    title: "Advent of Code: Day 1 - J"
     date: 2019-12-01 12:00:00
     tags: [J, JSoftware, adventofcode]
   new-blog-site:
