@@ -1,5 +1,9 @@
 ---
 posts:
+  advent-of-code-day-5:
+    title: "Advent of Code: Day 5 - Dart"
+    date: 2019-12-05 12:00:00
+    tags: [Dart, adventofcode]
   advent-of-code-day-4:
     title: "Advent of Code: Day 4 - F#"
     date: 2019-12-04 12:00:00
