@@ -7,15 +7,13 @@ by [Lisp](https://en.wikipedia.org/wiki/Lisp_(programming_language)),
 [Clean](https://en.wikipedia.org/wiki/Clean_(programming_language)), and others.
 
 Haskell is a statically typed, purely functional language. The language if
-fully type inferenced and lazily evaluated.
-primarily object oriented in paradigm, but has support for others such as
-functional programming. The aim used to be for Dart to take over Javascript as
-a web language. It even had its own dedicated VM for Chrome at one point.
-But the language has found new life in being the primary language for the
-[Flutter](https://flutter.dev/) framework, a new rendition of "write once,
-deploy everywhere". Jam packed with lots of cool features like reified generics,
-mixins, and all your usual object oriented goodies, Dart is a language I think
-a lot of today's developers would have no problem getting used to using.
+fully type inferenced and lazily evaluated. Though mostly used in academia for
+the longest time. Haskell is very well suited to solving all sorts of problems.
+Unlike most functional programming languages, Haskell is purely functional and
+does not allow for any side effects. And although it is strongly typed, it is
+not necessary to add any types because it is fully inferenced. (See [Type System
+F](https://en.wikipedia.org/wiki/System_F) and [Hindley-Milner
+type system](https://en.wikipedia.org/wiki/Hindley%E2%80%93Milner_type_system).
 
 ## My Experience
 
@@ -37,8 +35,9 @@ See the problem statement [here](https://adventofcode.com/2019/day/6).
 ## Part 1
 
 ```haskell
-import qualified Data.Map as Map
-import qualified Data.Set as Set
+import Data.Map as Map
+import Data.Set as Set
+import qualified
 
 swap :: (a, a) -> (a, a)
 swap (a, b) = (b, a)
