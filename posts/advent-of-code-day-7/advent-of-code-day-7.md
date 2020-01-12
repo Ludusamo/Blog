@@ -1,4 +1,4 @@
-# Today's Language - Haskell
+# Today's Language - Bash
 
 The language I used today was
 [BASH](https://en.wikipedia.org/wiki/Bash_(Unix_shell))
