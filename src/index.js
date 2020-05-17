@@ -71,7 +71,7 @@ const router = async () => {
 }
 
 const onNavLinkClick = (pathName, state={}) => {
-  window.history.pushState(state, pathName, window.location.origin +  pathName)
+  window.history.pushState(state, pathName, window.location.origin + pathName)
   router()
 }
 
@@ -80,6 +80,15 @@ window.addEventListener('hashchange', router)
 window.addEventListener('load', router)
 
 // Scripting
+
+async function getPostMetadata() {
+  const res = await fetch('/blog/posts/metadata.yml',
+    { headers: {
+        'Content-Type': 'application/yaml'
+      }})
+  const yamlContent = await res.text()
+  return jsyaml.safeLoad(yamlContent).posts
+}
 
 function yearGrouping(posts) {
   let years = {}
@@ -101,7 +110,7 @@ function createPostListing(post) {
   const postDate = document.createElement('PostListDate')
   const postLink = document.createElement('PostLink')
   postLink.innerText = post.title
-  postLink.onclick = () => onNavLinkClick('/blog/#/post/' + post.route, post)
+  postLink.onclick = () => onNavLinkClick('/blog/#/post/' + post.route)
   postLink.classList.add('link')
   postTitle.appendChild(postLink)
   postDate.innerText = moment(post.date).format('YYYY-MM-DD')
@@ -127,32 +136,25 @@ function populatePostList(postMetadata) {
 }
 
 async function mainPageLoad() {
-  const res = await fetch('/blog/posts/metadata.yml',
-    { headers: {
-        'Content-Type': 'application/yaml'
-      }})
-  const yamlContent = await res.text()
-  const metadata = jsyaml.safeLoad(yamlContent).posts
-  populatePostList(metadata)
+  populatePostList(await getPostMetadata())
 }
 
 async function loadPostContent(id) {
   const markdownLoc = '/blog/posts/' + id + '/' + id + '.md'
   const res = await fetch(markdownLoc,
-    { headers: {
-      'Content-Type': 'text/markdown; charset=UTF-8'
-    }})
+    { headers: { 'Content-Type': 'text/markdown; charset=UTF-8' }})
   const md = await res.text()
   const content = new showdown.Converter().makeHtml(md)
   return content
 }
 
 async function postPageLoad(id) {
+  const metadata = await getPostMetadata()
   let backButton = document.getElementsByTagName('BackButton')[0]
   backButton.onclick = () => {
       onNavLinkClick('/blog', {})
   }
-  const postInfo = window.history.state
+  const postInfo = metadata[id]
   const content = await loadPostContent(id)
   document.getElementsByTagName('PostTitle')[0].innerText = postInfo.title
   document.getElementsByTagName('PostDate')[0].innerText =
