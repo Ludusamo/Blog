@@ -21,7 +21,7 @@ let mainPage = `
     </PostList>
     <hr/>
     <Footer>
-      © 2019 Brendan Horng • License <a href="https://github.com/Ludusamo/blog/blob/master/LICENSE">MIT</a>
+      © 2019-<Year></Year> Brendan Horng • License <a href="https://github.com/Ludusamo/blog/blob/master/LICENSE">MIT</a>
     </Footer>
 `
 
@@ -136,6 +136,10 @@ function populatePostList(postMetadata) {
 }
 
 async function mainPageLoad() {
+  const yearElements = document.getElementsByTagName('Year')
+  for (let ele of yearElements) {
+    ele.innerHTML = new Date().getFullYear()
+  }
   populatePostList(await getPostMetadata())
 }
 
