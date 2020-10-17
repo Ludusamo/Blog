@@ -101,7 +101,12 @@ function yearGrouping(posts) {
     }
     years[year].push(postInfo)
   }
-  return years;
+  let grouping = []
+  for (const year in years) {
+    grouping.push([year, years[year]])
+  }
+  grouping.sort((a, b) => b[0] - a[0])
+  return grouping
 }
 
 function createPostListing(post) {
@@ -123,12 +128,12 @@ function populatePostList(postMetadata) {
   const postGrouping = yearGrouping(postMetadata)
   let postList = document.getElementsByTagName('PostList')[0]
   postList.innerHTML = ''
-  for (const year in postGrouping) {
+  for (const yearGroup of postGrouping) {
     const yearGroupEle = document.createElement('YearGroup')
     const yearTitle = document.createElement('YearTitle')
-    yearTitle.innerText = year
+    yearTitle.innerText = yearGroup[0]
     yearGroupEle.appendChild(yearTitle)
-    for (const post of postGrouping[year]) {
+    for (const post of yearGroup[1]) {
       yearGroupEle.appendChild(createPostListing(post))
     }
     postList.appendChild(yearGroupEle)

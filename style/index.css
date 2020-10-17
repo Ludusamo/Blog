@@ -75,6 +75,7 @@ PostList {
 }
 
 YearGroup {
+  padding: 0.5rem;
   display: flex;
   flex-direction: column;
 }
